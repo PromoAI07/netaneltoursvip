@@ -1148,4 +1148,310 @@ Splurge-worthy paid activities:
 
 *Planning a budget trip through Southeast Asia? We can help with routing, accommodation, and visa advice. Message us on WhatsApp.*
     `
+},
+{
+  id: 'vietnam-2-week-itinerary',
+  title:
+  'The Ultimate 2-Week Vietnam Itinerary: North to South (2025-2026)',
+  excerpt:
+  'A detailed day-by-day guide to spending two incredible weeks in Vietnam — from the misty mountains of Sapa to the bustling streets of Ho Chi Minh City, with every transport, stay, and must-see experience covered.',
+  coverImage:
+  'https://images.unsplash.com/photo-1557750255-c76072a7aad1?w=800&q=80',
+  category: 'Itinerary',
+  date: '2025-12-15',
+  readTime: '14 min read',
+  author: 'Netanel',
+  tags: [
+  'Vietnam',
+  'Itinerary',
+  'Backpacking',
+  'Southeast Asia',
+  'Ha Long Bay',
+  'Hoi An',
+  'Ho Chi Minh City'],
+
+  content: `
+# The Ultimate 2-Week Vietnam Itinerary: North to South
+
+Vietnam is one of the most rewarding countries in Southeast Asia to travel through. The food is incredible, the scenery is jaw-dropping, and the costs are still remarkably low. This itinerary takes you from the mountainous north all the way down to the energy of the south — covering the highlights without feeling rushed.
+
+---
+
+## At a Glance
+
+| Days | Destination | Highlights |
+|------|-------------|------------|
+| 1–2 | Hanoi | Old Quarter, street food, Temple of Literature |
+| 3–4 | Sapa | Rice terraces, trekking, homestays |
+| 5–6 | Ha Long Bay | Overnight cruise, kayaking, caves |
+| 7–8 | Ninh Binh | Tam Coc boat ride, Mua Cave, cycling |
+| 9–10 | Hue | Imperial Citadel, royal tombs, local cuisine |
+| 11–12 | Hoi An | Ancient town, tailors, beaches, cooking class |
+| 13–14 | Ho Chi Minh City | War Remnants Museum, Cu Chi Tunnels, nightlife |
+
+**Total estimated budget:** $800–$1,400 per person (excluding international flights)
+
+---
+
+## Days 1–2: Hanoi — The Chaotic Capital
+
+Start your trip in Vietnam's capital. Hanoi is loud, beautiful, and overwhelming in the best way.
+
+### What to Do
+- **Walk the Old Quarter** — get lost in the 36 ancient streets, each named after the trade it was known for
+- **Visit the Temple of Literature** — Vietnam's first university, dating back to 1070
+- **See Hoan Kiem Lake** — the spiritual heart of the city, especially beautiful at sunrise
+- **Explore the Ho Chi Minh Mausoleum complex** — the mausoleum, museum, and One Pillar Pagoda
+- **Watch a water puppet show** — a uniquely Vietnamese art form at Thang Long Theatre
+
+### Where to Eat
+- **Pho Gia Truyen (49 Bat Dan)** — arguably the best pho in Hanoi
+- **Bun Cha Huong Lien** — the "Obama bun cha" spot; still excellent and cheap
+- **Egg coffee at Cafe Giang** — a Hanoi invention you have to try
+- **Banh Mi 25** — one of the top banh mi in the city
+
+### Where to Stay
+- **Budget:** Old Quarter hostels — $6–$12/night for a dorm
+- **Mid-range:** Boutique hotels around Hoan Kiem — $25–$50/night
+- **Tip:** Stay in the Old Quarter for the best atmosphere and walkability
+
+### Getting Around
+- Grab (Southeast Asia's Uber) works perfectly in Hanoi
+- Walking is the best way to explore the Old Quarter
+
+---
+
+## Days 3–4: Sapa — Mountains and Rice Terraces
+
+Take the overnight sleeper train from Hanoi to Lao Cai (about 8 hours), then a bus up to Sapa.
+
+### What to Do
+- **Trek through the rice terraces** — book a 1-day or 2-day trek with a local Hmong guide
+- **Stay in a homestay** — the best way to experience Sapa is sleeping in a traditional village
+- **Visit Cat Cat Village** — a short walk from Sapa town with waterfalls and traditional houses
+- **Watch the sunrise over the Muong Hoa Valley** — bring a warm jacket, it gets cold
+
+### Practical Tips
+- **Best season:** September–November (rice harvest, golden terraces) or March–May (green terraces)
+- **Sleeper train:** Book with Violette or King Express for comfortable beds — about $25–$35 one way
+- **Trekking cost:** $20–$40 per person for a full-day guided trek including lunch
+- **Bring layers** — Sapa can drop below 10°C at night, even in autumn
+
+### Budget
+- Homestay with dinner and breakfast: $10–$15/night
+- Trek: $25–$40/day
+- Transport (train + bus): $30–$40 each way
+
+---
+
+## Days 5–6: Ha Long Bay — Limestone and Emerald Water
+
+Return to Hanoi, then head to Ha Long Bay (about 3–4 hours by shuttle).
+
+### What to Do
+- **Take an overnight cruise** — this is the best way to see Ha Long Bay; you'll kayak through limestone karsts, visit caves, and sleep on the water
+- **Kayak through floating villages** — paddle through hidden lagoons and see how local fishing communities live
+- **Explore Sung Sot (Surprise) Cave** — one of the largest grottoes in Ha Long Bay
+- **Swim and jump off the boat** — most cruises include swimming stops in the bay
+
+### Booking Tips
+- **Budget cruise:** $80–$120 per person for a 2-day/1-night cruise (includes meals, kayaking, and cave visits)
+- **Mid-range cruise:** $150–$250 for better boats and fewer crowds
+- **Book directly or through a Hanoi agency** — walk-in prices in the Old Quarter are often cheaper than online
+- **Alternative:** Lan Ha Bay (adjacent, less crowded) offers the same scenery with fewer tourist boats
+
+---
+
+## Days 7–8: Ninh Binh — Ha Long Bay on Land
+
+From Hanoi, take a bus to Ninh Binh (about 2 hours). This area is often called "Ha Long Bay on Land" for its dramatic limestone karst scenery.
+
+### What to Do
+- **Tam Coc boat ride** — a 2-hour rowboat trip through rice paddies and caves; one of Vietnam's most iconic experiences
+- **Climb Mua Cave (Hang Mua)** — 500 steps to the top for a panoramic view over the valley and river
+- **Cycle through the countryside** — rent a bike and ride through villages, temples, and rice fields
+- **Visit Bai Dinh Pagoda** — the largest Buddhist temple complex in Vietnam
+- **Explore Trang An** — a UNESCO World Heritage Site with boat rides through caves and grottos
+
+### Practical Tips
+- **Tam Coc boat ride:** ~$7 per person (tips for the rower are customary — $2–$3)
+- **Accommodation:** Stay in Tam Coc village for the best access — $10–$25/night for a guesthouse
+- **Rent a bicycle:** $2–$3/day or a motorbike for $5–$7/day
+- **Best time to visit:** May–June (golden rice season) or September–October
+
+---
+
+## Days 9–10: Hue — The Imperial City
+
+Fly from Hanoi to Hue (about 1 hour, $30–$60 on VietJet or Bamboo Airways) or take the Reunification Express train (about 14 hours — a scenic option if you have time).
+
+### What to Do
+- **Explore the Imperial Citadel** — the former seat of the Nguyen Dynasty; a massive walled fortress with palaces, temples, and gardens
+- **Visit the Royal Tombs** — Khai Dinh and Tu Duc tombs are the most impressive
+- **Ride a dragon boat on the Perfume River** — a relaxing afternoon trip with pagoda visits
+- **Eat your way through Hue** — this city has its own cuisine, distinct from the north and south
+
+### What to Eat
+- **Bun Bo Hue** — the spicy beef noodle soup that originated here; richer and bolder than pho
+- **Banh Beo, Banh Nam, Banh Loc** — a trio of delicate steamed rice cakes unique to Hue
+- **Com Hen** — rice with baby clams, herbs, and chili; a local specialty
+- **Visit Dong Ba Market** — the best place to sample street food and local snacks
+
+### Budget
+- Imperial Citadel entry: ~$7
+- Royal tomb entries: $3–$5 each
+- Dragon boat tour: $3–$5
+- Accommodation: $10–$30/night
+- Meals: $2–$5 per meal
+
+---
+
+## Days 11–12: Hoi An — The Most Charming Town in Vietnam
+
+Take the bus or private car from Hue to Hoi An (about 3–4 hours) via the stunning Hai Van Pass.
+
+### What to Do
+- **Walk through the Ancient Town** — a UNESCO World Heritage Site with Japanese bridges, Chinese temples, and French colonial architecture
+- **Get clothes tailored** — Hoi An is famous for its tailors; you can get a custom suit or dress made in 24–48 hours for $50–$200
+- **Take a cooking class** — learn to make cao lau, banh mi, and fresh spring rolls from a local chef ($20–$35)
+- **Hit An Bang Beach** — a beautiful sandy beach just 4 km from the old town; rent a sunbed for $2
+- **Rent a bicycle and explore** — the countryside around Hoi An is flat, green, and gorgeous
+- **Visit the lantern-lit old town at night** — every evening the old town glows with colorful lanterns; on the 14th of every lunar month, they turn off the electric lights for a full lantern festival
+
+### Where to Eat
+- **Cao Lau** — thick noodles in a rich broth, only found in Hoi An
+- **White Rose dumplings** — shrimp-filled rice paper bundles, a Hoi An specialty
+- **Banh Mi Phuong** — Anthony Bourdain called it "the best banh mi in the world"
+- **Madam Khanh (Banh Mi Queen)** — the other legendary banh mi spot
+
+### Budget
+- Ancient town ticket: ~$5 (covers 5 attractions)
+- Cooking class: $20–$35
+- Tailor-made clothing: $50–$200
+- Accommodation: $8–$35/night
+- Bicycle rental: $1–$2/day
+
+---
+
+## Days 13–14: Ho Chi Minh City — The Southern Powerhouse
+
+Fly from Da Nang (near Hoi An) to Ho Chi Minh City (about 1.5 hours, $30–$60).
+
+### What to Do
+- **War Remnants Museum** — a powerful and sobering museum about the Vietnam War; essential visit
+- **Cu Chi Tunnels** — take a half-day trip to the famous Viet Cong tunnel network ($15–$25 for a guided tour)
+- **Ben Thanh Market** — a massive indoor market for souvenirs, street food, and local goods (bargain hard)
+- **Walk down Bui Vien Street** — the backpacker street; loud, wild, and full of energy at night
+- **Visit the Notre-Dame Cathedral and Central Post Office** — beautiful French colonial architecture in the city center
+- **Explore District 4 for street food** — this is where locals eat; incredible banh mi, broken rice (com tam), and fresh seafood
+
+### Where to Eat
+- **Com Tam (broken rice)** — the signature dish of Saigon, served with grilled pork and egg
+- **Banh Xeo** — crispy Vietnamese crepes stuffed with shrimp and bean sprouts; try them at Banh Xeo 46A
+- **Pho Le** — a beloved pho spot in District 7
+- **Bep Me In** — great home-style Vietnamese cooking in a cozy setting
+
+### Budget
+- War Remnants Museum: ~$2
+- Cu Chi Tunnels tour: $15–$25
+- Accommodation: $8–$40/night
+- Street food meals: $1–$4
+- Grab rides across the city: $2–$5
+
+---
+
+## Budget Summary
+
+Here is a realistic daily budget breakdown for this 14-day Vietnam itinerary:
+
+### Budget Traveler ($55–$70/day)
+
+- Accommodation (hostels/guesthouses): $8–$15
+- Food (street food + local restaurants): $10–$15
+- Transport (local buses, Grab): $5–$10
+- Activities and entrance fees: $10–$15
+- Miscellaneous: $5
+- **Daily total: $55–$70**
+- **14-day total: $770–$980**
+
+### Mid-Range Traveler ($90–$130/day)
+
+- Accommodation (boutique hotels): $25–$45
+- Food (mix of local and nicer restaurants): $15–$25
+- Transport (domestic flights, private transfers): $15–$25
+- Activities and tours: $15–$25
+- Miscellaneous: $10
+- **Daily total: $90–$130**
+- **14-day total: $1,260–$1,820**
+
+---
+
+## Transport Between Cities
+
+| Route | Best Option | Cost | Time |
+|-------|-------------|------|------|
+| Hanoi → Sapa | Overnight sleeper train | $25–$35 | 8 hours |
+| Sapa → Hanoi | Sleeper train or bus | $25–$35 | 8 hours |
+| Hanoi → Ha Long Bay | Shuttle bus (included in cruise) | Included | 3–4 hours |
+| Hanoi → Ninh Binh | Bus | $5–$8 | 2 hours |
+| Hanoi → Hue | Flight (VietJet/Bamboo) | $30–$60 | 1 hour |
+| Hue → Hoi An | Bus or private car | $8–$15 | 3–4 hours |
+| Da Nang → Ho Chi Minh City | Flight | $30–$60 | 1.5 hours |
+
+**Pro tip:** Book domestic flights on VietJet or Bamboo Airways 2–3 weeks in advance for the best prices. Always check carry-on baggage allowances — budget airlines charge extra for checked bags.
+
+---
+
+## Essential Packing Tips
+
+- **Light, breathable clothing** — Vietnam is hot and humid, especially in the south
+- **A warm layer for Sapa** — temperatures can drop to 5–10°C at night
+- **Rain jacket or poncho** — useful year-round, essential during monsoon season (May–October)
+- **Comfortable walking shoes** — you'll walk a lot in Hanoi, Hoi An, and HCMC
+- **Sunscreen and insect repellent** — especially for rural areas and beaches
+- **Power adapter** — Vietnam uses Type A, C, and F plugs (220V)
+- **eSIM or local SIM** — get a Viettel or Mobifone SIM at the airport for $5–$10 (unlimited data for 30 days)
+
+---
+
+## Visa Information
+
+Most nationalities can enter Vietnam visa-free for 45 days (as of 2025). This was extended from the previous 15-day limit.
+
+**Countries with 45-day visa-free access include:**
+- All EU countries
+- UK
+- USA (as of 2025)
+- Australia
+- Canada
+- Japan, South Korea
+
+**If you need a visa:**
+- Apply for an e-Visa online — costs $25 and takes 3 business days
+- Valid for 90 days, single entry
+- Apply at: evisa.xuatnhapcanh.gov.vn
+
+---
+
+## Final Tips
+
+1. **Learn basic Vietnamese phrases** — "xin chao" (hello), "cam on" (thank you), "bao nhieu" (how much) go a long way
+2. **Always carry small bills** — many places don't have change for large notes
+3. **Negotiate at markets** — start at 50% of the asking price
+4. **Download Grab** — it's the Uber of Southeast Asia and works in all major cities
+5. **Try everything** — Vietnam's street food is safe, delicious, and absurdly cheap
+6. **Don't skip the small towns** — Ninh Binh and Hoi An are often the highlights of the trip
+
+---
+
+✈️ **Ready to book your Vietnam adventure?** Compare flights and find the best deals for your dates.
+
+[👉 Search Flights on Trip.com →](https://trip.tp.st/By8d4T6V)
+
+🏨 **Find the perfect places to stay** across Vietnam — from Hanoi hostels to Hoi An boutiques.
+
+[👉 Search & Book Accommodation on Booking.com →](https://booking.tp.st/6QdRvwVZ)
+
+*Need help planning your Vietnam trip? We can assist with routing, accommodation recommendations, and visa advice. Message us on WhatsApp.*
+    `
 }];

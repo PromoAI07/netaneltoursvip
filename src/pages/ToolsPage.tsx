@@ -428,6 +428,7 @@ export function ToolsPage({ onNavigate }: ToolsPageProps) {
                     return (
                       <label
                         key={itemIdx}
+                        onClick={() => toggleItem(item.name)}
                         className={`flex items-start gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-gray-50 ${isChecked ? 'opacity-60' : ''}`}>
                         
                             <div

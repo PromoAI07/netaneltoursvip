@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createElement } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HomePage } from './pages/HomePage';
 import { BlogPage } from './pages/BlogPage';
 import { ArticlePage } from './pages/ArticlePage';
@@ -35,27 +35,6 @@ export function App() {
   const [selectedArticleId, setSelectedArticleId] = useState<
     string | undefined>(
     initialState.id);
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.defer = true;
-    script.src = 'https://emrldco.com/NDk5NTk0.js?t=499594';
-    script.setAttribute('data-noptimize', '1');
-    script.setAttribute('data-cfasync', 'false');
-    script.setAttribute('data-wpfc-render', 'false');
-    script.crossOrigin = 'anonymous';
-    script.onerror = () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-    document.head.appendChild(script);
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
   useEffect(() => {
     const handlePopState = () => {
       const { page, id } = getStateFromUrl();

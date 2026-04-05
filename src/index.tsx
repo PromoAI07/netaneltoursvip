@@ -69,11 +69,11 @@ const securityMetas: Array<{
   httpEquiv: 'Content-Security-Policy',
   content: [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://emrldco.com",
+  "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data: blob: https://images.unsplash.com https://cdn.magicpatterns.com https://plus.unsplash.com https://picsum.photos https://flagcdn.com",
-  "connect-src 'self' https://formsubmit.co https://emrldco.com",
+  "connect-src 'self' https://formsubmit.co",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self' https://formsubmit.co"].

@@ -60,17 +60,13 @@ noscript.innerHTML =
 '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">';
 document.head.appendChild(noscript);
 // ── Security Meta Tags ──
-const securityMetas: Array<{
-  httpEquiv?: string;
-  name?: string;
-  content: string;
-}> = [
+const securityMetas: Array<{ httpEquiv?: string; name?: string; content: string; }> = [
 {
   httpEquiv: 'Content-Security-Policy',
   content: [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://emrldco.com",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "script-src 'self' https://emrldco.com",
+  "style-src 'self' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "img-src 'self' data: blob: https://images.unsplash.com https://cdn.magicpatterns.com https://plus.unsplash.com https://picsum.photos https://flagcdn.com",
   "connect-src 'self' https://formsubmit.co https://emrldco.com",
@@ -103,17 +99,5 @@ securityMetas.forEach(({ httpEquiv, name, content }) => {
   meta.setAttribute('content', content);
   document.head.appendChild(meta);
 });
-// ── Copy / Right-click Protection ──
-document.addEventListener('contextmenu', (e) => e.preventDefault());
-document.addEventListener('copy', (e) => e.preventDefault());
-document.addEventListener('cut', (e) => e.preventDefault());
-document.addEventListener('keydown', (e) => {
-  if (
-  (e.ctrlKey || e.metaKey) &&
-  ['c', 'x', 'a', 'u', 's', 'p'].includes(e.key.toLowerCase()))
-  {
-    e.preventDefault();
-  }
-  if (e.key === 'F12') e.preventDefault();
-});
+
 render(<App />, document.getElementById('root'));

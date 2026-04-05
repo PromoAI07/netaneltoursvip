@@ -14,7 +14,6 @@ body {
 }
 /* Performance optimizations */
 html {
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

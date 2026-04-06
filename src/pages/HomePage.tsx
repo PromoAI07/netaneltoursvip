@@ -6,6 +6,7 @@ import { ToolsTeaser } from '../components/ToolsTeaser';
 import { RecommendedPlacesSection } from '../components/RecommendedPlacesSection';
 import { PersonalTrustSection } from '../components/PersonalTrustSection';
 import { ConversionSection } from '../components/ConversionSection';
+import { PricingTiersSection } from '../components/PricingTiersSection';
 import { VisaAssistanceSection } from '../components/VisaAssistanceSection';
 import { InfluencerSection } from '../components/InfluencerSection';
 import { SocialMediaSection } from '../components/SocialMediaSection';
@@ -25,6 +26,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <ToolsTeaser onNavigate={onNavigate as any} />
         <RecommendedPlacesSection />
         <PersonalTrustSection />
+        <PricingTiersSection />
         <ConversionSection />
         <VisaAssistanceSection />
         <BlogSection onNavigate={onNavigate as any} />

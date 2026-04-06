@@ -8,11 +8,6 @@ import {
   User } from
 'lucide-react';
 export function PersonalTrustSection() {
-  const scrollToForm = () => {
-    document.getElementById('plan-trip')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200">
       <div className="max-w-7xl mx-auto">
@@ -34,43 +29,34 @@ export function PersonalTrustSection() {
           {/* Content */}
           <div className="flex flex-col justify-center">
             <h2 className="md:text-4xl font-bold text-[#1f2933] mb-8 text-[28px]">
-              Travel with Someone Who Has Lived It
+              Expert On-Ground Support in Asia
             </h2>
 
             <div className="space-y-4 text-[#4b5563] text-base md:text-lg leading-relaxed mb-8">
               <p>
-                I'm Netanel, a long-term traveler with over 17 years of
-                real-world travel experience across Asia, Europe, and beyond.
+                I'm Netanel, based right here in Asia. I don't just give advice from afar — I provide real, local support to help you relocate without the hassle.
               </p>
               <p>
-                I've spent more than half my life on the road, exploring
-                countries, cultures, and destinations from every angle — not
-                just as a tourist, but as someone living the journey.
+                Moving across the world can be overwhelming. From navigating confusing visa rules and finding the right neighborhood, to dealing with language barriers and local paperwork, the process is full of potential traps.
               </p>
               <p>
-                Along the way, I've faced and learned how to avoid the real
-                problems travelers don't expect — from bad hotel choices and
-                unreliable flights to hidden risks and situations that can
-                quickly turn a dream vacation into a stressful experience.
+                I help you skip the frustration. By working with me, you save time, save money, and avoid common scams that many newcomers fall for.
               </p>
               <p>
-                This experience allows me to help you avoid mistakes, choose the
-                right places, and build a smooth, safe, and unforgettable travel
-                experience.
+                Whether you need a simple consultation to plan your move, or full VIP concierge support when you land, I connect you with trusted local resources — lawyers, real estate agents, and services — ensuring your transition from tourist to resident is seamless.
               </p>
               <p className="font-medium text-[#1f2933]">
-                My goal is simple: help you travel smarter, safer, and better —
-                with the confidence of someone who has already been there.
+                Don't guess your way through relocating. Get expert help from someone who lives here.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <button
-                onClick={scrollToForm}
+                onClick={() => document.getElementById('relocation-packages')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-[#1f2933] text-white px-8 py-4 rounded font-semibold hover:bg-[#374151] transition-colors flex items-center justify-center">
                 
-                Plan Your Trip with Me <ArrowRight className="ml-2 h-5 w-5" />
+                View Relocation Packages <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <a
                 href="https://api.whatsapp.com/send?phone=972529566211"

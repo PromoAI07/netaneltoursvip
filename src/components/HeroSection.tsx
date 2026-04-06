@@ -156,7 +156,7 @@ export function HeroSection() {
 
         {/* Silver radiant shine title */}
         <h1
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight max-w-4xl mx-auto leading-tight"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight max-w-5xl mx-auto leading-tight"
           style={{
             background:
             'linear-gradient(90deg, #c0c0c0 0%, #f8f8f8 25%, #ffffff 50%, #f0f0f0 75%, #a8a8a8 100%)',
@@ -166,36 +166,45 @@ export function HeroSection() {
             textShadow: 'none',
             filter: 'drop-shadow(0 2px 12px rgba(255,255,255,0.25))'
           }}>
-          
-          Travel With Experience
+
+          Relocate to Asia
           <br />
-          On Your Side.
+          the Smart Way
         </h1>
 
         {/* Sub-headline */}
         <p
-          className="text-base sm:text-lg md:text-xl text-white mb-12 max-w-2xl mx-auto leading-relaxed font-medium"
+          className="text-base sm:text-lg md:text-xl text-white mb-4 max-w-2xl mx-auto leading-relaxed font-semibold"
           style={{
             textShadow:
             '0 1px 12px rgba(0,0,0,0.9), 0 2px 24px rgba(0,0,0,0.7)'
           }}>
-          
-          I've been traveling long-term for 17+ years. I know the shortcuts, the
-          risks, the hidden gems and how to make your trip smooth from day one
+
+          Stop guessing. Stop wasting money. Get real local help to move, settle, and live in Thailand or Vietnam.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto">
+        {/* Supporting line */}
+        <p
+          className="text-sm sm:text-base md:text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed"
+          style={{
+            textShadow:
+            '0 1px 8px rgba(0,0,0,0.7), 0 2px 16px rgba(0,0,0,0.5)'
+          }}>
+          From visas and apartments to full relocation support on the ground — I help you move faster, safer, and smarter.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto">
           <button
-            onClick={() => scrollToSection('plan-trip')}
+            onClick={() => scrollToSection('relocation-packages')}
             className="flex-1 bg-white text-[#1f2933] px-8 py-4 rounded font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center">
-            
-            Let's Plan Your Trip <ArrowRight className="ml-2 h-5 w-5" />
+
+            Start Your Relocation <ArrowRight className="ml-2 h-5 w-5" />
           </button>
           <button
             onClick={() => scrollToSection('services')}
             className="flex-1 border border-white/80 text-white px-8 py-4 rounded font-bold text-lg hover:bg-white/10 transition-colors">
-            
-            Discover My Tools 🔧
+
+            Explore Travel Tools
           </button>
         </div>
       </div>

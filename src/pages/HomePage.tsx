@@ -8,6 +8,7 @@ import { PersonalTrustSection } from '../components/PersonalTrustSection';
 import { ConversionSection } from '../components/ConversionSection';
 import { VisaAssistanceSection } from '../components/VisaAssistanceSection';
 import { InfluencerSection } from '../components/InfluencerSection';
+import { RelocationPackages } from '../components/RelocationPackages';
 import { SocialMediaSection } from '../components/SocialMediaSection';
 import { BlogSection } from '../components/BlogSection';
 import { WhatsAppButton } from '../components/WhatsAppButton';
@@ -21,10 +22,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <Navbar onNavigate={onNavigate} />
       <main>
         <HeroSection />
+        <RelocationPackages />
+        <PersonalTrustSection />
         <TravelerJourneySection />
         <ToolsTeaser onNavigate={onNavigate as any} />
         <RecommendedPlacesSection />
-        <PersonalTrustSection />
         <ConversionSection />
         <VisaAssistanceSection />
         <BlogSection onNavigate={onNavigate as any} />

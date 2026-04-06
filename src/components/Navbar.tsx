@@ -103,6 +103,14 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-6">
+            {/* Relocate — scrolls to relocation packages */}
+            <button
+              onClick={() => scrollToSection('relocate')}
+              className={`font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
+
+              Relocate
+            </button>
+
             {/* Travel Steps — scrolls to the services grid */}
             <button
               onClick={() => scrollToSection('services')}
@@ -287,10 +295,10 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             </div>
 
             <button
-              onClick={() => scrollToSection('plan-trip')}
+              onClick={() => scrollToSection('relocate')}
               className={`px-5 py-2 rounded-md font-medium transition-colors ${isScrolled || forceDark ? 'bg-[#1f2933] text-white hover:bg-[#374151]' : 'bg-white text-[#1f2933] hover:bg-gray-100'}`}>
-              
-              Plan My Trip
+
+              Get Started
             </button>
           </div>
 
@@ -317,6 +325,14 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
         className={`lg:hidden border-b border-white/30 absolute top-full left-0 w-full shadow-lg max-h-[80vh] overflow-y-auto transition-all duration-300 ${isScrolled ? 'bg-white/85 backdrop-blur-md' : 'bg-white/50 backdrop-blur-md'}`}>
         
           <div className="px-4 pt-2 pb-6 space-y-1">
+            {/* Relocate */}
+            <button
+            onClick={() => scrollToSection('relocate')}
+            className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
+
+              Relocate to Asia
+            </button>
+
             {/* Travel Steps */}
             <button
             onClick={() => scrollToSection('services')}
@@ -489,10 +505,10 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             </div>
 
             <button
-            onClick={() => scrollToSection('plan-trip')}
+            onClick={() => scrollToSection('relocate')}
             className="block w-full text-left px-3 py-3 mt-4 bg-[#1f2933] text-white rounded-md font-medium text-center">
-            
-              Plan My Trip
+
+              Get Started
             </button>
           </div>
         </div>

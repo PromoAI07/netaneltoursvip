@@ -214,12 +214,18 @@ export function TravelerJourneySection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-[#1f2933] mb-6">
-            Everything You Need For Travel — In One Place
+            Your Smart Travel Booking System
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            No endless searching. No guessing. Just the best booking links for
-            flights, hotels, cars, insurance and experiences — curated for
-            serious travelers.
+            All the tools you need in one place — flights, hotels, cars,
+            insurance, and experiences. Trusted partners, better deals, zero
+            hassle.
+          </p>
+          <p className="text-xs text-gray-400 max-w-2xl mx-auto mt-4">
+            Some of the links below are affiliate links — meaning I may earn a
+            small commission if you book through them, at no extra cost to you.
+            This helps support the site and allows me to keep providing free
+            travel content. I only recommend services I personally use and trust.
           </p>
         </div>
 

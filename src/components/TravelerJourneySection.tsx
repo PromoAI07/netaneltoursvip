@@ -221,6 +221,9 @@ export function TravelerJourneySection() {
             flights, hotels, cars, insurance and experiences — curated for
             serious travelers.
           </p>
+          <p className="text-red-600 font-bold max-w-2xl mx-auto text-sm mt-4">
+            * Some links below will redirect you to our trusted partner suppliers. You pay the same price — we may earn a small commission to support our work.
+          </p>
         </div>
 
         <div className="space-y-12">

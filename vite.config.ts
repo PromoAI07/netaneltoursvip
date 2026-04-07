@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    minify: 'terser',
+    minify: 'esbuild',
     cssMinify: true,
     rollupOptions: {
       output: {
@@ -16,8 +16,5 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     sourcemap: false,
     cssCodeSplit: true,
-  },
-  server: {
-    compress: true,
   },
 })

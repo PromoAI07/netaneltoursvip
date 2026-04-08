@@ -286,12 +286,14 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               }
             </div>
 
-            <button
-              onClick={() => scrollToSection('plan-trip')}
+            <a
+              href="https://calendly.com/netaneltoursvip/new-meeting"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`px-5 py-2 rounded-md font-medium transition-colors ${isScrolled || forceDark ? 'bg-[#1f2933] text-white hover:bg-[#374151]' : 'bg-white text-[#1f2933] hover:bg-gray-100'}`}>
               
-              Plan My Trip
-            </button>
+              Book Consultation
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -488,12 +490,14 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             }
             </div>
 
-            <button
-            onClick={() => scrollToSection('plan-trip')}
+            <a
+            href="https://calendly.com/netaneltoursvip/new-meeting"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block w-full text-left px-3 py-3 mt-4 bg-[#1f2933] text-white rounded-md font-medium text-center">
             
-              Plan My Trip
-            </button>
+              Book Consultation
+            </a>
           </div>
         </div>
       }

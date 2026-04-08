@@ -214,13 +214,14 @@ export function TravelerJourneySection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-[#1f2933] mb-6">
-            Everything You Need For Travel — In One Place
+            Your Smart Booking System
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            No endless searching. No guessing. Just the best booking links for
-            flights, hotels, cars, insurance and experiences — curated for
-            serious travelers.
+          <p className="text-gray-500 max-w-2xl mx-auto text-lg mb-4">
+            Everything you need for travel and relocation — in one place. Get better deals by using my trusted partner links to book flights, hotels, cars, insurance, and experiences.
           </p>
+          <div className="inline-block bg-gray-100 text-gray-600 text-sm px-4 py-2 rounded-full font-medium">
+            Note: Clicking these tools will redirect you to my trusted external partners.
+          </div>
         </div>
 
         <div className="space-y-12">

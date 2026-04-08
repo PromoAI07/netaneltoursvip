@@ -167,9 +167,9 @@ export function HeroSection() {
             filter: 'drop-shadow(0 2px 12px rgba(255,255,255,0.25))'
           }}>
           
-          Travel With Experience
+          Move to Asia
           <br />
-          On Your Side.
+          Without the Stress.
         </h1>
 
         {/* Sub-headline */}
@@ -180,22 +180,21 @@ export function HeroSection() {
             '0 1px 12px rgba(0,0,0,0.9), 0 2px 24px rgba(0,0,0,0.7)'
           }}>
           
-          I've been traveling long-term for 17+ years. I know the shortcuts, the
-          risks, the hidden gems and how to make your trip smooth from day one
+          Save time, avoid expensive mistakes, and get real local help. I live in Asia and provide on-ground support to make your relocation seamless.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto">
           <button
-            onClick={() => scrollToSection('plan-trip')}
+            onClick={() => scrollToSection('relocation-packages')}
             className="flex-1 bg-white text-[#1f2933] px-8 py-4 rounded font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center">
             
-            Let's Plan Your Trip <ArrowRight className="ml-2 h-5 w-5" />
+            Relocation Packages <ArrowRight className="ml-2 h-5 w-5" />
           </button>
           <button
             onClick={() => scrollToSection('services')}
             className="flex-1 border border-white/80 text-white px-8 py-4 rounded font-bold text-lg hover:bg-white/10 transition-colors">
             
-            Discover My Tools 🔧
+            Travel Tools 🔧
           </button>
         </div>
       </div>

@@ -25,6 +25,11 @@ img {
   height: auto;
   display: block;
 }
+/* Prevent ad-injected overlays from hijacking image clicks in cards */
+.group img,
+.group .aspect-\\[3\\/2\\] {
+  pointer-events: none;
+}
 /* Optimize image rendering */
 img[loading="lazy"] {
   content-visibility: auto;

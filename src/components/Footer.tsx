@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Netanel Tours VIP</h3>
             <p className="text-gray-400 text-sm max-w-xs">
-              Your trusted relocation and travel partner in Asia. Local expertise, seamless moves, and smart booking tools.
+              Asia relocation services for Thailand and Vietnam. Expert on-ground support for expats and digital nomads — visa guidance, housing, and smart travel booking tools.
             </p>
           </div>
 

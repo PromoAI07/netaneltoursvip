@@ -10,11 +10,10 @@ export function BlogSection({ onNavigate }: BlogSectionProps) {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-4">
-            Travel Blog Posts
+            Asia Relocation & Travel Blog
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Everything you need to know about Asia before you set foot on the
-            ground.
+            Practical guides on how to relocate to Thailand or Vietnam — visa rules, cost of living for expats, housing tips, and local insights.
           </p>
         </div>
 

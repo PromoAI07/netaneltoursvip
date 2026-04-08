@@ -134,7 +134,7 @@ export function HeroSection() {
         
         <img
           src="/1000133315.png"
-          alt="World travel destinations collage"
+          alt="Relocate to Asia — Thailand and Vietnam travel destinations"
           className="w-full h-full object-cover object-center"
           loading="eager"
           fetchPriority="high"

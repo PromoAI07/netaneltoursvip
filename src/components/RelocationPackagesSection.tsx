@@ -10,7 +10,7 @@ export function RelocationPackagesSection() {
             Asia Relocation Packages
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Choose the right level of support for your move to Thailand or Vietnam. From a focused strategy call to full VIP concierge — real on-ground expertise to help you settle in Asia with confidence.
+            Explore our Asia relocation packages and choose the right level of support for your move. Whether you are relocating to Thailand or Vietnam, our expert relocation services in Asia give you the on-ground guidance you need to settle in with confidence.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export function RelocationPackagesSection() {
             <div className="text-gray-300 mb-6 text-sm">End-to-end guidance & support</div>
             <div className="mb-6">
               <span className="text-4xl font-extrabold text-white">~$890</span>
-              <span className="text-gray-400 text-lg"> – $1,490</span>
+              <span className="text-gray-400 text-lg"> to $1,490</span>
             </div>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">

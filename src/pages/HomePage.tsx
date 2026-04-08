@@ -6,7 +6,6 @@ import { PersonalTrustSection } from '../components/PersonalTrustSection';
 import { TravelerJourneySection } from '../components/TravelerJourneySection';
 import { ToolsTeaser } from '../components/ToolsTeaser';
 import { RecommendedPlacesSection } from '../components/RecommendedPlacesSection';
-import { OffersSection } from '../components/OffersSection';
 import { ConversionSection } from '../components/ConversionSection';
 import { VisaAssistanceSection } from '../components/VisaAssistanceSection';
 import { InfluencerSection } from '../components/InfluencerSection';
@@ -31,7 +30,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <TravelerJourneySection />
         <ToolsTeaser onNavigate={onNavigate as any} />
         <RecommendedPlacesSection />
-        <OffersSection />
         <ConversionSection />
         <VisaAssistanceSection />
         <BlogSection onNavigate={onNavigate as any} />

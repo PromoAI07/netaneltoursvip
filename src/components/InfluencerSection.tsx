@@ -39,7 +39,7 @@ export function InfluencerSection() {
             <div className="absolute -inset-3 rounded-2xl border border-white/10 hidden lg:block"></div>
             <div className="relative rounded-xl overflow-hidden shadow-2xl aspect-[4/5]">
               <img
-                src="/ChatGPT_Image_Feb_21,_2026,_12_29_52_PM.png"
+                src="/ChatGPT_Image_Feb_21,_2026,_12_29_52_PM.webp"
                 alt="Travel influencer creating content"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"

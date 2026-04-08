@@ -6,10 +6,12 @@ export default defineConfig({
   build: {
     minify: 'esbuild',
     cssMinify: true,
+    target: ['es2020', 'chrome80', 'safari14'],
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
+          icons: ['lucide-react'],
         },
       },
     },

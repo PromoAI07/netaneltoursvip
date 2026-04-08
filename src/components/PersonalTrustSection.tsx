@@ -15,7 +15,7 @@ export function PersonalTrustSection() {
           {/* Image */}
           <div className="w-full rounded-lg overflow-hidden shadow-sm lg:aspect-[3/4]">
             <img
-              src="/ChatGPT_Image_Feb_21,_2026,_12_27_05_PM.png"
+             src="/ChatGPT_Image_Feb_21,_2026,_12_27_05_PM.webp"
               alt="Netanel traveling the world"
               className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
               loading="lazy"

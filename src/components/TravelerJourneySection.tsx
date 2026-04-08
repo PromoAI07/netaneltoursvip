@@ -234,7 +234,7 @@ export function TravelerJourneySection() {
               buttonText="Search Flights"
               icon={Plane}
               link="https://trip.tp.st/By8d4T6V"
-              imageUrl="/file_00000000c43c71faaed3da2abf2efc90.png"
+              imageUrl="/file_00000000c43c71faaed3da2abf2efc90.webp"
               imageAlt="Booking Flights Anywhere in the World with Netanel" />
             
             <StandardCard
@@ -244,7 +244,7 @@ export function TravelerJourneySection() {
               buttonText="Book Stays"
               icon={Hotel}
               link="https://booking.tp.st/fE9TPCct"
-              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_38_15_AM.png"
+              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_38_15_AM.webp"
               imageAlt="Hotels and Stays by Booking.com with Netanel" />
             
             <StandardCard
@@ -254,7 +254,7 @@ export function TravelerJourneySection() {
               buttonText="View Deals"
               icon={Luggage}
               link="https://trip.tp.st/bHOWSgz6"
-              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_35_49_AM.png"
+              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_35_49_AM.webp"
               imageAlt="Flight and Hotel Deals with Netanel" />
             
           </div>
@@ -281,7 +281,7 @@ export function TravelerJourneySection() {
               buttonText="Get Insurance"
               icon={HeartPulse}
               link="https://ektatraveling.tp.st/nODljNJv"
-              imageUrl="/ChatGPT_Image_Feb_21,_2026,_12_04_42_PM.png"
+              imageUrl="/ChatGPT_Image_Feb_21,_2026,_12_04_42_PM.webp"
               imageAlt="Travel Insurance Worldwide Coverage" />
             
             <DualActionCard
@@ -289,7 +289,7 @@ export function TravelerJourneySection() {
               title="How Do You Ride?"
               description="Rental cars and airport transfers worldwide."
               icon={Car}
-              imageUrl="/file_000000004d2471faa18d09ce93a2c86d.png"
+              imageUrl="/file_000000004d2471faa18d09ce93a2c86d.webp"
               imageAlt="Rental Cars and Transfers"
               buttons={[
               {
@@ -316,7 +316,7 @@ export function TravelerJourneySection() {
               title="Explore Local Experiences"
               description="Theme parks, guided tours, and unique local attractions."
               icon={Ticket}
-              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_50_43_AM.png"
+              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_50_43_AM.webp"
               imageAlt="Tickets and Attractions"
               buttons={[
               {
@@ -336,7 +336,7 @@ export function TravelerJourneySection() {
               buttonText="Get eSIM"
               icon={Smartphone}
               link="https://airalo.tp.st/sbw9crL4"
-              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_59_00_AM.png"
+              imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_59_00_AM.webp"
               imageAlt="eSIM Card Deals by Airalo" />
             
           </div>

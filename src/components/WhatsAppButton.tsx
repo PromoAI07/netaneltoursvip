@@ -10,7 +10,7 @@ export function WhatsAppButton() {
       aria-label="Chat on WhatsApp">
       
       <img
-        src="/1000134607.png"
+        src="/1000134607.webp"
         alt="Chat on WhatsApp"
         className="h-16 w-16 drop-shadow-lg"
         loading="lazy"

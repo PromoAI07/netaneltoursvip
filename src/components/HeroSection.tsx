@@ -1,7 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 export function HeroSection() {
-  const [scrollY, setScrollY] = useState(0);
+  // Use refs instead of state to avoid 60fps React re-renders
+  const parallaxRef = useRef<HTMLDivElement>(null);
+  const scrollYRef = useRef(0);
   const gyroTarget = useRef({
     x: 0,
     y: 0
@@ -11,13 +13,12 @@ export function HeroSection() {
     y: 0
   });
   const rafRef = useRef<number | null>(null);
-  const [gyroOffset, setGyroOffset] = useState({
-    x: 0,
-    y: 0
-  });
-  // Scroll parallax
+
+  // Scroll parallax — write directly to DOM, no React state
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      scrollYRef.current = window.scrollY;
+    };
     window.addEventListener('scroll', handleScroll, {
       passive: true
     });
@@ -38,10 +39,11 @@ export function HeroSection() {
         (gyroTarget.current.x - gyroCurrent.current.x) * lerpFactor;
         gyroCurrent.current.y +=
         (gyroTarget.current.y - gyroCurrent.current.y) * lerpFactor;
-        setGyroOffset({
-          x: gyroCurrent.current.x,
-          y: gyroCurrent.current.y
-        });
+        // Update DOM directly — avoids React reconciliation on every frame
+        if (parallaxRef.current) {
+          parallaxRef.current.style.transform =
+            `translateX(${gyroCurrent.current.x}px) translateY(${scrollYRef.current * 0.3 + gyroCurrent.current.y}px)`;
+        }
       }
       rafRef.current = requestAnimationFrame(animate);
     };
@@ -121,27 +123,31 @@ export function HeroSection() {
       
       {/* Background Image — gyro + scroll parallax */}
       <div
+        ref={parallaxRef}
         className="absolute z-0"
         style={{
           top: '-20%',
           left: '-20%',
           right: '-20%',
           bottom: '-20%',
-          transform: `translateX(${gyroOffset.x}px) translateY(${scrollY * 0.3 + gyroOffset.y}px)`,
           willChange: 'transform',
           transition: 'none'
         }}>
         
-        <img
-          src="/1000133315.png"
-          alt="Relocate to Asia — Thailand and Vietnam travel destinations"
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-          fetchPriority="high"
-          decoding="sync"
-          sizes="100vw"
-          width="1920"
-          height="1080" />
+        <picture>
+          <source srcSet="/1000133315.webp" type="image/webp" />
+          {/* PNG fallback for older browsers */}
+          <img
+            src="/1000133315.png"
+            alt="Relocate to Asia — Thailand and Vietnam travel destinations"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+            sizes="100vw"
+            width="1440"
+            height="810" />
+        </picture>
         
       </div>
 

@@ -172,10 +172,10 @@ export function ServiceCategoryCards() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-4">
-            All Our Favorite Links Down Below!
+            Travel & Relocation Booking Tools for Asia
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Everything you need for a perfect trip, all in one place.
+            Everything you need to move to Thailand or Vietnam — flights, accommodation, insurance, car hire, and local experiences. All trusted partner links in one place.
           </p>
         </div>
 

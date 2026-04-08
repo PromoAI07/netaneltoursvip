@@ -172,13 +172,13 @@ export function VisaAssistanceSection() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-            Need Help With a Visa for
+            Visa Help for Your Move to
             <br className="hidden sm:block" />{' '}
-            <span className="text-yellow-300">Thailand or Vietnam?</span>
+            <span className="text-yellow-300">Thailand or Vietnam</span>
           </h2>
           <p className="text-blue-100/90 text-lg max-w-2xl mx-auto leading-relaxed font-light">
             Don't get stuck at immigration. I'll guide you to the right official
-            channels and trusted visa solutions.
+            channels and trusted visa solutions for foreigners relocating to Asia.
           </p>
         </div>
 
@@ -221,12 +221,11 @@ export function VisaAssistanceSection() {
             {/* Right: CTA */}
             <div className="p-8 lg:p-10 flex flex-col justify-center bg-gradient-to-br from-white/5 to-transparent">
               <h3 className="text-2xl font-bold text-white mb-4 leading-snug">
-                Contact me and I'll direct you to the right place for the visa
-                you need.
+                Get visa guidance for Thailand or Vietnam — directed to the right place fast.
               </h3>
               <p className="text-gray-300 text-base mb-10 leading-relaxed font-light">
-                Whether you're planning a long stay in Thailand or a quick trip
-                to Vietnam, I'll point you in the right direction — fast.
+                Whether you're relocating long-term to Thailand or planning an extended stay in
+                Vietnam, I'll point you to the correct visa options — quickly and clearly.
               </p>
 
               {/* Primary CTA */}

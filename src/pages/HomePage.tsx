@@ -12,6 +12,7 @@ import { VisaAssistanceSection } from '../components/VisaAssistanceSection';
 import { InfluencerSection } from '../components/InfluencerSection';
 import { SocialMediaSection } from '../components/SocialMediaSection';
 import { BlogSection } from '../components/BlogSection';
+import { FaqSection } from '../components/FaqSection';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { Footer } from '../components/Footer';
 
@@ -34,6 +35,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <ConversionSection />
         <VisaAssistanceSection />
         <BlogSection onNavigate={onNavigate as any} />
+        <FaqSection />
         <InfluencerSection />
         <SocialMediaSection />
       </main>

@@ -117,11 +117,10 @@ export function OffersSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-[#1f2933] mb-4">
-            Relocate with Confidence
+            Relocation Services in Asia
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
-            Choose the right level of support to make your move to Asia smooth, safe, and
-            stress-free. I provide real on-ground expertise to help you settle in.
+            Whether you're moving to Thailand or Vietnam for the first time or need full concierge support on the ground, choose the package that fits your relocation needs.
           </p>
         </div>
 

@@ -52,11 +52,11 @@ export function ToolsTeaser({ onNavigate }: ToolsTeaserProps) {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-4">
-            Traveler Tools 🔧
+            Free Travel & Relocation Tools
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Interactive tools to help you plan smarter — app finder, packing
-            lists, budget calculator, and visa checker.
+            Interactive tools to help you plan your move to Asia smarter — app finder, packing
+            lists, budget calculator, and visa checker for Thailand and Vietnam.
           </p>
         </div>
 

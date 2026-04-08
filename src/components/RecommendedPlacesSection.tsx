@@ -81,11 +81,11 @@ export function RecommendedPlacesSection() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-3">
-            Last Places I Stayed & Recommend
+            Personally Recommended Places to Stay in Asia
           </h2>
           <p className="text-[#4b5563] text-base md:text-lg max-w-2xl mx-auto">
-            Real places I've personally stayed at and recommend. Updated as I
-            explore new destinations.
+            Real places I've personally stayed at in Thailand and Vietnam and recommend. Updated as I
+            explore new destinations — ideal for expats and relocators scouting accommodation.
           </p>
         </div>
 

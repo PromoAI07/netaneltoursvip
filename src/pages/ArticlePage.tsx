@@ -4,6 +4,14 @@ import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { blogPosts } from '../data/blogPosts';
 import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
+
+// Append &fm=webp to Unsplash URLs so the browser receives WebP images
+function toWebpUrl(url: string): string {
+  if (url.includes('images.unsplash.com')) {
+    return url.includes('fm=') ? url : `${url}&fm=webp`;
+  }
+  return url;
+}
 interface ArticlePageProps {
   articleId: string;
   onNavigate: (page: 'home' | 'blog' | 'article', id?: string) => void;
@@ -174,7 +182,7 @@ export function ArticlePage({ articleId, onNavigate }: ArticlePageProps) {
         {/* Hero Image */}
         <div className="w-full h-[40vh] md:h-[50vh] relative overflow-hidden">
           <img
-            src={article.coverImage || article.imageUrl} // Handle both potential property names if they differ, though blogPosts.ts has coverImage
+            src={toWebpUrl(article.coverImage)}
             alt={article.title}
             className="w-full h-full object-cover" />
           

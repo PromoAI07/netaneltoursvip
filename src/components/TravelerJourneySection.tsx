@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Component } from 'react';
+import React, { useEffect } from 'react';
 import {
   Hotel,
   Plane,
@@ -11,6 +11,18 @@ import {
   ChevronDown,
   ArrowRight } from
 'lucide-react';
+// Helper: builds a responsive srcset for local /path/to/image.webp files
+function buildWebpSrcSet(imageUrl: string): string | undefined {
+  if (!imageUrl.startsWith('/') || !imageUrl.endsWith('.webp')) return undefined;
+  const base = imageUrl.slice(0, -5); // strip .webp
+  return `${base}-400w.webp 400w, ${base}-800w.webp 800w, ${imageUrl} 1536w`;
+}
+function toPngFallback(imageUrl: string): string {
+  if (imageUrl.startsWith('/') && imageUrl.endsWith('.webp')) {
+    return imageUrl.slice(0, -5) + '.png';
+  }
+  return imageUrl;
+}
 // --- Reusable Card Components ---
 interface BaseCardProps {
   step: number;
@@ -37,19 +49,27 @@ function StandardCard({
   return (
     <div className="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[#4b5563] transition-all duration-300 hover:scale-[1.02] hover:shadow-md h-full flex flex-col">
       <div className="aspect-[3/2] w-full overflow-hidden relative bg-gray-100">
-        <img
-          src={imageUrl}
-          alt={imageAlt}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-          decoding="async"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
-          width="800"
-          height="533"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = 'https://picsum.photos/800/533?grayscale';
-          }} />
+        <picture>
+          {buildWebpSrcSet(imageUrl) && (
+            <source
+              srcSet={buildWebpSrcSet(imageUrl)}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
+              type="image/webp" />
+          )}
+          <img
+            src={toPngFallback(imageUrl)}
+            alt={imageAlt}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
+            width="1536"
+            height="1024"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://picsum.photos/800/533?grayscale';
+            }} />
+        </picture>
         
         {/* Step Badge */}
         <div className="absolute top-4 left-4 w-10 h-10 bg-[#1f2933] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-2 border-white z-10">
@@ -96,19 +116,27 @@ function DualActionCard({
   return (
     <div className="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-[#4b5563] transition-all duration-300 hover:scale-[1.02] hover:shadow-md h-full flex flex-col">
       <div className="aspect-[3/2] w-full overflow-hidden relative bg-gray-100">
-        <img
-          src={imageUrl}
-          alt={imageAlt}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
-          decoding="async"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
-          width="800"
-          height="533"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = 'https://picsum.photos/800/533?grayscale';
-          }} />
+        <picture>
+          {buildWebpSrcSet(imageUrl) && (
+            <source
+              srcSet={buildWebpSrcSet(imageUrl)}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
+              type="image/webp" />
+          )}
+          <img
+            src={toPngFallback(imageUrl)}
+            alt={imageAlt}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 400px"
+            width="1536"
+            height="1024"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = 'https://picsum.photos/800/533?grayscale';
+            }} />
+        </picture>
         
         <div className="absolute top-4 left-4 w-10 h-10 bg-[#1f2933] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-md border-2 border-white z-10">
           {step}

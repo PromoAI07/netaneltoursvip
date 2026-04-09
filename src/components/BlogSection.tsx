@@ -1,8 +1,16 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { ArrowRight, MapPin, Calendar, Tag } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
 interface BlogSectionProps {
   onNavigate?: (page: 'home' | 'blog' | 'article', id?: string) => void;
+}
+
+// Append &fm=webp to Unsplash URLs so the browser receives WebP images
+function toWebpUrl(url: string): string {
+  if (url.includes('images.unsplash.com')) {
+    return url.includes('fm=') ? url : `${url}&fm=webp`;
+  }
+  return url;
 }
 export function BlogSection({ onNavigate }: BlogSectionProps) {
   return (
@@ -30,7 +38,7 @@ export function BlogSection({ onNavigate }: BlogSectionProps) {
               aria-label={`Read article: ${post.title}`}>
               
                 <img
-                src={post.coverImage}
+                src={toWebpUrl(post.coverImage)}
                 alt={post.title}
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 loading="lazy"

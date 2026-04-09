@@ -12,7 +12,7 @@ export function ConversionSection() {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=70)',
+            'url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=70&fm=webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'blur(6px) brightness(0.55)',

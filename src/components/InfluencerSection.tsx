@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import {
   ArrowRight,
   DollarSign,
@@ -37,21 +37,27 @@ export function InfluencerSection() {
           <div className="relative">
             {/* Decorative frame */}
             <div className="absolute -inset-3 rounded-2xl border border-white/10 hidden lg:block"></div>
-            <div className="relative rounded-xl overflow-hidden shadow-2xl aspect-[4/5]">
-              <img
-                src="/ChatGPT_Image_Feb_21,_2026,_12_29_52_PM.webp"
-                alt="Travel influencer creating content"
-                className="w-full h-full object-cover object-center"
-                loading="lazy"
-                decoding="async"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                width="800"
-                height="1000"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src =
-                  'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80&auto=format&fit=crop';
-                }} />
+            <div className="relative rounded-xl overflow-hidden shadow-2xl aspect-[2/3]">
+              <picture>
+                <source
+                  srcSet="/ChatGPT_Image_Feb_21,_2026,_12_29_52_PM-400w.webp 400w, /ChatGPT_Image_Feb_21,_2026,_12_29_52_PM-800w.webp 800w, /ChatGPT_Image_Feb_21,_2026,_12_29_52_PM.webp 1024w"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  type="image/webp" />
+                <img
+                  src="/ChatGPT_Image_Feb_21,_2026,_12_29_52_PM.png"
+                  alt="Travel influencer creating content"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  width="1024"
+                  height="1536"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src =
+                    'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80&auto=format&fit=crop&fm=webp';
+                  }} />
+              </picture>
               
               {/* Instagram-style overlay badge */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">

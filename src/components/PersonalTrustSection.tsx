@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import {
   ArrowRight,
   MessageCircle,
@@ -13,17 +13,22 @@ export function PersonalTrustSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
-          <div className="w-full rounded-lg overflow-hidden shadow-sm lg:aspect-[3/4]">
-            <img
-             src="/ChatGPT_Image_Feb_21,_2026,_12_27_05_PM.webp"
-              alt="Netanel traveling the world"
-              className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
-              loading="lazy"
-              decoding="async"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              width="800"
-              height="1067" />
-            
+          <div className="w-full rounded-lg overflow-hidden shadow-sm lg:aspect-[2/3]">
+            <picture>
+              <source
+                srcSet="/ChatGPT_Image_Feb_21,_2026,_12_27_05_PM-400w.webp 400w, /ChatGPT_Image_Feb_21,_2026,_12_27_05_PM-800w.webp 800w, /ChatGPT_Image_Feb_21,_2026,_12_27_05_PM.webp 1024w"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                type="image/webp" />
+              <img
+               src="/ChatGPT_Image_Feb_21,_2026,_12_27_05_PM.png"
+                alt="Netanel traveling the world"
+                className="w-full h-auto lg:h-full lg:object-cover lg:object-top"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                width="1024"
+                height="1536" />
+            </picture>
           </div>
 
           {/* Content */}

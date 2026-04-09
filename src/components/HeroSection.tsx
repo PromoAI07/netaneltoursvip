@@ -135,7 +135,10 @@ export function HeroSection() {
         }}>
         
         <picture>
-          <source srcSet="/1000133315.webp" type="image/webp" />
+          <source
+            srcSet="/1000133315-640w.webp 640w, /1000133315-1280w.webp 1280w, /1000133315.webp 1536w"
+            sizes="100vw"
+            type="image/webp" />
           {/* PNG fallback for older browsers */}
           <img
             src="/1000133315.png"
@@ -145,8 +148,8 @@ export function HeroSection() {
             fetchPriority="high"
             decoding="sync"
             sizes="100vw"
-            width="1440"
-            height="810" />
+            width="1536"
+            height="1024" />
         </picture>
         
       </div>

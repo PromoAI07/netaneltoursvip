@@ -7,8 +7,13 @@ import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
 
 // Append &fm=webp to Unsplash URLs so the browser receives WebP images
 function toWebpUrl(url: string): string {
-  if (url.includes('images.unsplash.com')) {
-    return url.includes('fm=') ? url : `${url}&fm=webp`;
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === 'images.unsplash.com') {
+      return parsed.searchParams.has('fm') ? url : `${url}&fm=webp`;
+    }
+  } catch {
+    // Not a valid absolute URL — return unchanged
   }
   return url;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin, ExternalLink } from 'lucide-react';
 interface Place {
   city: string;

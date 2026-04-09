@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Mail } from 'lucide-react';
 export function Footer() {
   // Email is base64-encoded to prevent scraper harvesting

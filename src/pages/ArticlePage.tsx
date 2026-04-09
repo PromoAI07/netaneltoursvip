@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
@@ -19,7 +19,7 @@ function toWebpUrl(url: string): string {
 }
 interface ArticlePageProps {
   articleId: string;
-  onNavigate: (page: 'home' | 'blog' | 'article', id?: string) => void;
+  onNavigate: (page: 'home' | 'blog' | 'article' | 'tools', id?: string) => void;
 }
 // Simple Markdown Parser
 function renderMarkdown(markdown: string): string {

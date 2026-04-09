@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, MapPin, Calendar, Tag } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
 interface BlogSectionProps {

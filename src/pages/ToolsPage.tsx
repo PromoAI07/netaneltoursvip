@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
@@ -11,7 +11,6 @@ import {
   CheckSquare,
   Calculator,
   Shield,
-  ArrowRight,
   ExternalLink } from
 'lucide-react';
 // Data Imports
@@ -428,6 +427,7 @@ export function ToolsPage({ onNavigate }: ToolsPageProps) {
                     return (
                       <label
                         key={itemIdx}
+                        onClick={() => toggleItem(item.name)}
                         className={`flex items-start gap-3 p-3 rounded-lg cursor-pointer transition-colors hover:bg-gray-50 ${isChecked ? 'opacity-60' : ''}`}>
                         
                             <div

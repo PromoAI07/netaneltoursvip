@@ -1,11 +1,9 @@
-import React from 'react';
 import {
   ArrowRight,
   DollarSign,
   Users,
   Globe,
-  Zap,
-  CheckCircle } from
+  Zap } from
 'lucide-react';
 export function InfluencerSection() {
   const perks = [

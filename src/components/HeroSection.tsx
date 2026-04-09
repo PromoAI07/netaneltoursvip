@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 export function HeroSection() {
   // Use refs instead of state to avoid 60fps React re-renders

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Search, Globe, X } from 'lucide-react';
 import { countryApps, CountryApps } from '../data/countryApps';
 export function TravelToolboxSection() {

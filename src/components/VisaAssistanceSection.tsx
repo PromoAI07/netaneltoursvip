@@ -67,7 +67,7 @@ export function VisaAssistanceSection() {
         </div>
         <div className="w-16 h-16 rounded-full border border-yellow-400/50 bg-white/10 flex items-center justify-center mb-4 overflow-hidden">
           <img
-            src="https://flagcdn.com/w80/th.png"
+            src="https://flagcdn.com/w80/th.webp"
             alt="Thailand flag"
             className="w-12 h-8 object-cover rounded" />
           
@@ -97,7 +97,7 @@ export function VisaAssistanceSection() {
         </div>
         <div className="w-16 h-16 rounded-full border border-yellow-400/50 bg-white/10 flex items-center justify-center mb-4 overflow-hidden">
           <img
-            src="https://flagcdn.com/w80/vn.png"
+            src="https://flagcdn.com/w80/vn.webp"
             alt="Vietnam flag"
             className="w-12 h-8 object-cover rounded" />
           
@@ -141,7 +141,7 @@ export function VisaAssistanceSection() {
             <div className="flex flex-col items-center gap-2">
               <div className="w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-lg overflow-hidden p-2">
                 <img
-                  src="https://flagcdn.com/w160/th.png"
+                  src="https://flagcdn.com/w160/th.webp"
                   alt="Thailand flag"
                   className="w-full h-full object-cover rounded-lg" />
                 
@@ -154,7 +154,7 @@ export function VisaAssistanceSection() {
             <div className="flex flex-col items-center gap-2">
               <div className="w-20 h-20 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-lg overflow-hidden p-2">
                 <img
-                  src="https://flagcdn.com/w160/vn.png"
+                  src="https://flagcdn.com/w160/vn.webp"
                   alt="Vietnam flag"
                   className="w-full h-full object-cover rounded-lg" />
                 

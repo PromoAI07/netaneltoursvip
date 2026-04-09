@@ -1,9 +1,22 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { blogPosts } from '../data/blogPosts';
 import { ArrowRight, Calendar, MapPin, Tag } from 'lucide-react';
+
+// Append &fm=webp to Unsplash URLs so the browser receives WebP images
+function toWebpUrl(url: string): string {
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === 'images.unsplash.com') {
+      return parsed.searchParams.has('fm') ? url : `${url}&fm=webp`;
+    }
+  } catch {
+    // Not a valid absolute URL — return unchanged
+  }
+  return url;
+}
 interface BlogPageProps {
   onNavigate: (page: 'home' | 'blog' | 'article', id?: string) => void;
 }
@@ -37,7 +50,7 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
                 aria-label={`Read article: ${post.title}`}>
                 
                   <img
-                  src={post.coverImage}
+                  src={toWebpUrl(post.coverImage)}
                   alt={post.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"

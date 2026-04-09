@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Mail } from 'lucide-react';
 export function Footer() {
+  // Email is base64-encoded to prevent scraper harvesting
+  const email = useMemo(() => atob('TmV0YW5lbFRvdXJzVmlwQGdtYWlsLmNvbQ=='), []);
   return (
     <footer className="bg-[#1f2933] text-white py-12 border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,11 +20,11 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact me</h4>
             <div className="space-y-3">
               <a
-                href="mailto:NetanelToursVip@gmail.com"
+                href={`mailto:${email}`}
                 className="flex items-center text-gray-400 hover:text-white transition-colors">
                 
                 <Mail className="h-5 w-5 mr-2" />
-                <span>NetanelToursVip@gmail.com</span>
+                <span>{email}</span>
               </a>
               <div className="flex items-center text-gray-400">
                 <span className="text-sm">Available 24/7 for VIP clients</span>

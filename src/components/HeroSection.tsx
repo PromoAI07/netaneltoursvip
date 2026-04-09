@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 export function HeroSection() {
   // Use refs instead of state to avoid 60fps React re-renders
+  const sectionRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
   const scrollYRef = useRef(0);
   const gyroTarget = useRef({
@@ -13,6 +14,7 @@ export function HeroSection() {
     y: 0
   });
   const rafRef = useRef<number | null>(null);
+  const visibleRef = useRef(true);
 
   // Scroll parallax — write directly to DOM, no React state
   useEffect(() => {
@@ -32,22 +34,33 @@ export function HeroSection() {
     const frameInterval = isMobile ? 2 : 1; // skip every other frame on mobile
     let frameCount = 0;
     const animate = () => {
-      frameCount++;
-      if (frameCount % frameInterval === 0) {
-        const lerpFactor = 0.12;
-        gyroCurrent.current.x +=
-        (gyroTarget.current.x - gyroCurrent.current.x) * lerpFactor;
-        gyroCurrent.current.y +=
-        (gyroTarget.current.y - gyroCurrent.current.y) * lerpFactor;
-        // Update DOM directly — avoids React reconciliation on every frame
-        if (parallaxRef.current) {
-          parallaxRef.current.style.transform =
-            `translateX(${gyroCurrent.current.x}px) translateY(${scrollYRef.current * 0.3 + gyroCurrent.current.y}px)`;
+      // Only perform DOM writes when hero is visible; always reschedule to keep loop alive
+      if (visibleRef.current) {
+        frameCount++;
+        if (frameCount % frameInterval === 0) {
+          const lerpFactor = 0.12;
+          gyroCurrent.current.x +=
+          (gyroTarget.current.x - gyroCurrent.current.x) * lerpFactor;
+          gyroCurrent.current.y +=
+          (gyroTarget.current.y - gyroCurrent.current.y) * lerpFactor;
+          // Update DOM directly — avoids React reconciliation on every frame
+          if (parallaxRef.current) {
+            parallaxRef.current.style.transform =
+              `translateX(${gyroCurrent.current.x}px) translateY(${scrollYRef.current * 0.3 + gyroCurrent.current.y}px)`;
+          }
         }
       }
       rafRef.current = requestAnimationFrame(animate);
     };
     rafRef.current = requestAnimationFrame(animate);
+
+    // Pause DOM writes when hero scrolls out of view to save CPU
+    const observer = new IntersectionObserver(
+      ([entry]) => { visibleRef.current = entry.isIntersecting; },
+      { threshold: 0 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
     // Device orientation (gyroscope) — image moves OPPOSITE to tilt
     const handleOrientation = (e: DeviceOrientationEvent) => {
       const gamma = e.gamma ?? 0; // left/right tilt (-90 to 90)
@@ -105,6 +118,7 @@ export function HeroSection() {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       window.removeEventListener('deviceorientation', handleOrientation);
       window.removeEventListener('mousemove', handleMouseMove);
+      observer.disconnect();
     };
   }, []);
   const scrollToSection = (id: string) => {
@@ -116,6 +130,7 @@ export function HeroSection() {
   };
   return (
     <section
+      ref={sectionRef}
       className="relative w-full bg-[#1f2933] overflow-hidden"
       style={{
         minHeight: '100svh'

@@ -99,7 +99,7 @@ export const countryApps: CountryApps[] = [
     ...getCategoryStyle('ride'),
     apps: [
     { name: 'Grab', note: '#1 choice' },
-    { name: 'Bolt', usually: 'Often cheaper' },
+    { name: 'Bolt', note: 'Often cheaper' },
     { name: 'InDrive', note: 'Negotiate fares' }]
 
   },

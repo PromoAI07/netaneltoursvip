@@ -1,4 +1,3 @@
-import React, { lazy } from 'react';
 export function WhatsAppButton() {
   return (
     <a

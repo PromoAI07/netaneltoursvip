@@ -1,4 +1,3 @@
-import React, { createElement } from 'react';
 import './index.css';
 import { render } from 'react-dom';
 import { App } from './App';

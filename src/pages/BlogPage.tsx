@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
@@ -18,7 +17,7 @@ function toWebpUrl(url: string): string {
   return url;
 }
 interface BlogPageProps {
-  onNavigate: (page: 'home' | 'blog' | 'article', id?: string) => void;
+  onNavigate: (page: 'home' | 'blog' | 'article' | 'tools', id?: string) => void;
 }
 export function BlogPage({ onNavigate }: BlogPageProps) {
   return (

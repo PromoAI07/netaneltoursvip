@@ -1,4 +1,3 @@
-import React from 'react';
 import { Check, Star, ArrowRight } from 'lucide-react';
 
 export function RelocationPackagesSection() {

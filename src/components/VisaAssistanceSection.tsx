@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle, FileText } from 'lucide-react';
 export function VisaAssistanceSection() {
   const services = [

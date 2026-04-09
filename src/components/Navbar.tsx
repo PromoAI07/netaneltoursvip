@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 interface NavbarProps {
   onNavigate?: (
   page: 'home' | 'blog' | 'article' | 'tools',
-  id?: number | string)
+  id?: string)
   => void;
   forceDark?: boolean;
 }

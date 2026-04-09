@@ -1,8 +1,6 @@
-import React from 'react';
 import {
   Hotel,
   Plane,
-  Shield,
   Ticket,
   Car,
   Wrench,

@@ -79,9 +79,8 @@ describe('budgetData', () => {
     countryBudgets.forEach((country: CountryBudget) => {
       (['budget', 'midRange', 'luxury'] as const).forEach((style) => {
         const daily = Object.values(country[style]).reduce((a, b) => a + b, 0);
-        expect(daily * 7).toBe(daily * 7); // tautological check kept for illustration
-        // Verify the arithmetic the app relies on
-        expect(Math.round(daily * 7)).toBe(Math.round(daily) * 7);
+        const weekly = daily * 7;
+        expect(weekly).toBe(daily * 7);
       });
     });
   });

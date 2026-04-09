@@ -176,7 +176,7 @@ export function HeroSection() {
             filter: 'drop-shadow(0 2px 12px rgba(255,255,255,0.25))'
           }}>
           
-          Move to Asia
+          Move to Vietnam or Thailand
           <br />
           Without the Stress.
         </h1>

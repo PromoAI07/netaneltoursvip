@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig, Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -19,6 +20,11 @@ function asyncCSSPlugin(): Plugin {
 
 export default defineConfig({
   plugins: [react(), asyncCSSPlugin()],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/test/setup.ts'],
+  },
   build: {
     minify: 'esbuild',
     cssMinify: true,

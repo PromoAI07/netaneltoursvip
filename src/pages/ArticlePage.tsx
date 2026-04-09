@@ -6,7 +6,7 @@ import { blogPosts } from '../data/blogPosts';
 import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
 
 // Append &fm=webp to Unsplash URLs so the browser receives WebP images
-function toWebpUrl(url: string): string {
+export function toWebpUrl(url: string): string {
   try {
     const parsed = new URL(url);
     if (parsed.hostname === 'images.unsplash.com') {
@@ -22,7 +22,7 @@ interface ArticlePageProps {
   onNavigate: (page: 'home' | 'blog' | 'article' | 'tools', id?: string) => void;
 }
 // Simple Markdown Parser
-function renderMarkdown(markdown: string): string {
+export function renderMarkdown(markdown: string): string {
   if (!markdown) return '';
   // 1. Split into lines to handle block elements
   const lines = markdown.split('\n');

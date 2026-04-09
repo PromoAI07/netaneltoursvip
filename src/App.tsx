@@ -4,7 +4,7 @@ import { BlogPage } from './pages/BlogPage';
 import { ArticlePage } from './pages/ArticlePage';
 import { ToolsPage } from './pages/ToolsPage';
 type Page = 'home' | 'blog' | 'article' | 'tools';
-function getStateFromUrl(): {
+export function getStateFromUrl(): {
   page: Page;
   id?: string;
 } {

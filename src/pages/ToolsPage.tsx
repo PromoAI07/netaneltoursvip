@@ -24,6 +24,7 @@ import {
   statusLabels,
   VisaStatus } from
 '../data/visaData';
+import { getRankBadgeClass } from '../utils/rankBadge';
 interface ToolsPageProps {
   onNavigate: (page: 'home' | 'blog' | 'article' | 'tools', id?: string) => void;
 }
@@ -51,18 +52,6 @@ export function ToolsPage({ onNavigate }: ToolsPageProps) {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-  const getRankBadgeClass = (index: number) => {
-    switch (index) {
-      case 0:
-        return 'bg-yellow-100 text-yellow-700 border-yellow-300';
-      case 1:
-        return 'bg-gray-100 text-gray-600 border-gray-300';
-      case 2:
-        return 'bg-orange-100 text-orange-600 border-orange-300';
-      default:
-        return 'bg-gray-50 text-gray-500 border-gray-200';
-    }
-  };
   // --- Packing Checklist State ---
   const [selectedTripType, setSelectedTripType] = useState(tripTypes[0].value);
   const [selectedDuration, setSelectedDuration] = useState(durations[0].value);

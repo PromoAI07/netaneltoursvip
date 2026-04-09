@@ -24,7 +24,7 @@ export function Footer() {
                 className="flex items-center text-gray-400 hover:text-white transition-colors">
                 
                 <Mail className="h-5 w-5 mr-2" />
-                <span>{email}</span>
+                <span>Email me</span>
               </a>
               <div className="flex items-center text-gray-400">
                 <span className="text-sm">Available 24/7 for VIP clients</span>

@@ -89,9 +89,9 @@ export function InfluencerSection() {
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               Turn Your Passion for Travel Into Real Income 💸
-            </h2>
+            </h3>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
               Are you a travel creator, blogger, or influencer? Join the same

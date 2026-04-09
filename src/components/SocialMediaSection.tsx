@@ -74,9 +74,9 @@ export function SocialMediaSection() {
       className="py-16 px-4 sm:px-6 lg:px-8 bg-[#1f2933]">
       
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
           Follow Me & Stay Connected
-        </h2>
+        </h3>
         <p className="text-gray-400 mb-10 text-base">
           Join the community — follow for travel tips, deals, and real
           adventures

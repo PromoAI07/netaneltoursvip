@@ -2,4 +2,6 @@ User-agent: *
 Disallow: /admin/
 Disallow: /login/
 Disallow: /dashboard/
-Allow: / 
+Allow: /
+
+Sitemap: https://netaneltoursvip.com/sitemap.xml

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RelocationPackagesSection = () => {
+export const RelocationPackagesSection = () => {
     return (
         <div className="relocation-packages">
             <h2>Our Relocation Packages</h2>

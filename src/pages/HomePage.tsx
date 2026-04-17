@@ -1,6 +1,6 @@
 import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
-import RelocationPackagesSection from '../components/RelocationPackagesSection';
+import { RelocationPackagesSection } from '../components/RelocationPackagesSection';
 import { PersonalTrustSection } from '../components/PersonalTrustSection';
 import { TravelerJourneySection } from '../components/TravelerJourneySection';
 import { ToolsTeaser } from '../components/ToolsTeaser';

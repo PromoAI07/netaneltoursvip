@@ -1,48 +1,33 @@
-<section>
-    <div class="pain-points">
-        <h2>Pain Points</h2>
-        <div class="pain-point">
-            <img src="path/to/icon1.png" alt="Icon 1" />
-            <p>Description of pain point 1.</p>
-        </div>
-        <div class="pain-point">
-            <img src="path/to/icon2.png" alt="Icon 2" />
-            <p>Description of pain point 2.</p>
-        </div>
-        <!-- Add more pain points as necessary -->
-    </div>
+import React from 'react';
 
-    <div class="relocation-packages">
-        <div class="package smart-start">
-            <h3>Smart Start Consultation</h3>
-            <p>Price: $299</p>
-            <button>Start Smart</button>
+const RelocationPackagesSection = () => {
+    return (
+        <div className="relocation-packages">
+            <h2>Our Relocation Packages</h2>
+            <div className="package">
+                <h3>Smart Start Consultation</h3>
+                <p>Price: <strong>$299</strong></p>
+                <p>Get started on your new journey with our expert guidance.</p>
+                <button>Start Smart</button>
+            </div>
+            <div className="package most-popular">
+                <h3>Guided Relocation</h3>
+                <p>Price: <strong>$890 - $1,490</strong></p>
+                <p>This option is <strong>Most Popular</strong> among our clients. Let us guide you through every step of the relocation process.</p>
+                <button>Relocate With Guidance</button>
+            </div>
+            <div className="package">
+                <h3>VIP Full Relocation</h3>
+                <p>Price: <strong>$2,500+</strong></p>
+                <p>Experience our premium service, ensuring a seamless transition to your new home.</p>
+                <button>Go VIP</button>
+            </div>
+            <div className="trust-section">
+                <h4>30-Day Guarantee</h4>
+                <p>We are committed to taking care of you until you are settled in your new home. If you aren't satisfied within the first 30 days, we will ensure you're taken care of!</p>
+            </div>
         </div>
-        <div class="package guided-relocation most-popular">
-            <h3>Guided Relocation</h3>
-            <p>Price: $890 - $1,490</p>
-            <button>Relocate With Guidance</button>
-        </div>
-        <div class="package vip-full premium">
-            <h3>VIP Full Relocation</h3>
-            <p>Price: $2,500+</p>
-            <button>Go VIP</button>
-        </div>
-    </div>
+    );
+};
 
-    <footer class="trust-section">
-        <h4>Trustworthy Services</h4>
-        <p>30-day money-back guarantee</p>
-    </footer>
-</section>
-<style>
-    /* Mobile-first responsive design styles */
-    .relocation-packages {
-        display: flex;
-        flex-direction: column;
-    }
-    .package {
-        margin: 10px 0;
-    }
-    /* Additional styles as needed */
-</style>
+export default RelocationPackagesSection;

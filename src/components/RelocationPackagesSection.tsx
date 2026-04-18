@@ -166,7 +166,7 @@ export function RelocationPackagesSection() {
                   <a
                     href={calendlyUrl}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className={`inline-flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm sm:text-base font-bold transition-colors ${
                       isPopular
                         ? 'bg-white text-[#122338] hover:bg-gray-100'

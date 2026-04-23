@@ -1,4 +1,4 @@
-import { useState, type KeyboardEvent } from 'react';
+import { useRef, useState, type KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 type CountryKey = 'vietnam' | 'thailand';
@@ -439,17 +439,17 @@ export function RelocationCostSection() {
   const [activeCountry, setActiveCountry] = useState<CountryKey>('vietnam');
   const [openPainPoint, setOpenPainPoint] = useState<string | null>(null);
   const countryKeys = Object.keys(relocationData) as CountryKey[];
+  const countryButtonRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const activeData = relocationData[activeCountry];
 
-  const handleCountryMenuKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+  const handleCountryButtonKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
     event.preventDefault();
-    const currentIndex = countryKeys.indexOf(activeCountry);
-    if (currentIndex === -1) return;
     const direction = event.key === 'ArrowRight' ? 1 : -1;
-    const nextIndex = (currentIndex + direction + countryKeys.length) % countryKeys.length;
+    const nextIndex = (index + direction + countryKeys.length) % countryKeys.length;
     setActiveCountry(countryKeys[nextIndex]);
+    countryButtonRefs.current[nextIndex]?.focus();
   };
 
   return (
@@ -468,18 +468,21 @@ export function RelocationCostSection() {
         </div>
 
         <div
-          className="flex overflow-x-auto hide-scrollbar justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-mandatory"
-          onKeyDown={handleCountryMenuKeyDown}
-          tabIndex={0}
+          className="flex overflow-x-auto hide-scrollbar justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-proximity"
           aria-label="Relocation country options"
+          aria-describedby="relocation-country-scroll-hint"
         >
-          {countryKeys.map((key) => {
+          {countryKeys.map((key, index) => {
             const country = relocationData[key];
             const isActive = activeCountry === key;
             return (
               <button
                 key={key}
+                ref={(element) => {
+                  countryButtonRefs.current[index] = element;
+                }}
                 onClick={() => setActiveCountry(key)}
+                onKeyDown={(event) => handleCountryButtonKeyDown(event, index)}
                 aria-pressed={isActive}
                 className={`snap-start flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold whitespace-nowrap transition-all ${
                   isActive
@@ -499,7 +502,9 @@ export function RelocationCostSection() {
             );
           })}
         </div>
-        <p className="mb-10 text-xs text-gray-500 md:hidden">Scroll horizontally to see all options.</p>
+        <p id="relocation-country-scroll-hint" role="note" className="mb-10 text-xs text-gray-500 md:hidden">
+          Scroll horizontally to see all options.
+        </p>
 
         <div className="grid gap-4 sm:grid-cols-3 mb-10">
           {activeData.headlineStats.map((item) => (

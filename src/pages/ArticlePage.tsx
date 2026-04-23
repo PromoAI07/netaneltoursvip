@@ -62,16 +62,19 @@ export function renderMarkdown(markdown: string): string {
       continue;
     }
     // --- Headings ---
+    // Shift heading levels down by one: # → h2, ## → h3, ### → h4
+    // The article title is already rendered as h1 in the hero section,
+    // so markdown h1s become h2 to avoid multiple h1 tags on the page.
     if (line.startsWith('# ')) {
-      html += `<h1 class="text-2xl font-bold mb-4 mt-6 text-gray-800">${processInline(line.slice(2))}</h1>`;
+      html += `<h2 class="text-2xl font-bold mb-4 mt-6 text-gray-800">${processInline(line.slice(2))}</h2>`;
       continue;
     }
     if (line.startsWith('## ')) {
-      html += `<h2 class="text-xl font-semibold mb-3 mt-6 text-gray-700 border-b border-gray-200 pb-2">${processInline(line.slice(3))}</h2>`;
+      html += `<h3 class="text-xl font-semibold mb-3 mt-6 text-gray-700 border-b border-gray-200 pb-2">${processInline(line.slice(3))}</h3>`;
       continue;
     }
     if (line.startsWith('### ')) {
-      html += `<h3 class="text-lg font-semibold mb-2 mt-4 text-gray-700">${processInline(line.slice(4))}</h3>`;
+      html += `<h4 class="text-lg font-semibold mb-2 mt-4 text-gray-700">${processInline(line.slice(4))}</h4>`;
       continue;
     }
     // --- Horizontal Rule ---

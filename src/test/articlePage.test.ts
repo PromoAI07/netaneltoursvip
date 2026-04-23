@@ -43,21 +43,21 @@ describe('renderMarkdown', () => {
     expect(renderMarkdown('')).toBe('');
   });
 
-  it('renders an h1 heading', () => {
+  it('renders a markdown # heading as h2 (shifted for SEO)', () => {
     const html = renderMarkdown('# Hello World');
-    expect(html).toContain('<h1');
+    expect(html).toContain('<h2');
     expect(html).toContain('Hello World');
   });
 
-  it('renders an h2 heading', () => {
+  it('renders a markdown ## heading as h3 (shifted for SEO)', () => {
     const html = renderMarkdown('## Section Title');
-    expect(html).toContain('<h2');
+    expect(html).toContain('<h3');
     expect(html).toContain('Section Title');
   });
 
-  it('renders an h3 heading', () => {
+  it('renders a markdown ### heading as h4 (shifted for SEO)', () => {
     const html = renderMarkdown('### Sub Section');
-    expect(html).toContain('<h3');
+    expect(html).toContain('<h4');
     expect(html).toContain('Sub Section');
   });
 

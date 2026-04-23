@@ -456,7 +456,7 @@ export function RelocationCostSection() {
           </p>
         </div>
 
-        <div className="flex overflow-x-auto hide-scrollbar justify-start md:justify-center gap-2 mb-10 pb-2">
+        <div className="flex overflow-x-auto justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-mandatory">
           {(Object.keys(relocationData) as CountryKey[]).map((key) => {
             const country = relocationData[key];
             const isActive = activeCountry === key;
@@ -464,7 +464,7 @@ export function RelocationCostSection() {
               <button
                 key={key}
                 onClick={() => setActiveCountry(key)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold whitespace-nowrap transition-all ${
+                className={`snap-start flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold whitespace-nowrap transition-all ${
                   isActive
                     ? 'bg-[#1f2933] text-white shadow-md'
                     : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
@@ -482,6 +482,7 @@ export function RelocationCostSection() {
             );
           })}
         </div>
+        <p className="mb-10 text-xs text-gray-500 md:hidden">Swipe sideways to see all options.</p>
 
         <div className="grid gap-4 sm:grid-cols-3 mb-10">
           {activeData.headlineStats.map((item) => (
@@ -502,14 +503,14 @@ export function RelocationCostSection() {
                 <div key={key} className="rounded-xl border border-gray-200 bg-white overflow-hidden">
                   <button
                     onClick={() => setOpenPainPoint(isOpen ? null : key)}
-                    className="w-full text-left px-4 sm:px-6 py-4 flex items-start sm:items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                    className="w-full text-left px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 hover:bg-gray-50 transition-colors"
                     aria-expanded={isOpen}
                   >
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-xs font-bold uppercase tracking-[0.18em] text-gray-400 mb-1">{point.id}</p>
                       <h4 className="text-base sm:text-lg font-bold text-[#1f2933]">{point.title}</h4>
                     </div>
-                    <div className="flex items-center gap-3 shrink-0">
+                    <div className="flex w-full sm:w-auto items-center justify-between sm:justify-start gap-3 shrink-0">
                       <span className="rounded-full bg-red-50 border border-red-100 text-red-700 text-xs sm:text-sm font-bold px-3 py-1.5">
                         Avg Loss: {point.avgLoss}
                       </span>

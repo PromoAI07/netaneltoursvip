@@ -502,7 +502,7 @@ export function RelocationCostSection() {
             );
           })}
         </div>
-        <p id="relocation-country-scroll-hint" role="note" className="mb-10 text-xs text-gray-500 md:hidden">
+        <p id="relocation-country-scroll-hint" aria-live="polite" className="mb-10 text-xs text-gray-500 md:hidden">
           Scroll horizontally to see all options.
         </p>
 

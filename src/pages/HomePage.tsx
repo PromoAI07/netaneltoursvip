@@ -1,5 +1,6 @@
 import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
+import { RelocationCostSection } from '../components/RelocationCostSection';
 import { RelocationPackagesSection } from '../components/RelocationPackagesSection';
 import { PersonalTrustSection } from '../components/PersonalTrustSection';
 import { TravelerJourneySection } from '../components/TravelerJourneySection';
@@ -24,6 +25,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <Navbar onNavigate={onNavigate} />
       <main>
         <HeroSection />
+        <RelocationCostSection />
         <RelocationPackagesSection />
         <PersonalTrustSection />
         <TravelerJourneySection />

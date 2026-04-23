@@ -468,7 +468,7 @@ export function RelocationCostSection() {
         </div>
 
         <div
-          className="flex overflow-x-auto justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-mandatory"
+          className="flex overflow-x-auto hide-scrollbar justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-mandatory"
           onKeyDown={handleCountryMenuKeyDown}
           tabIndex={0}
           aria-label="Relocation country options"

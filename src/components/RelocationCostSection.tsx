@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type KeyboardEvent } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 type CountryKey = 'vietnam' | 'thailand';
@@ -438,8 +438,19 @@ const relocationData: Record<CountryKey, CountryData> = {
 export function RelocationCostSection() {
   const [activeCountry, setActiveCountry] = useState<CountryKey>('vietnam');
   const [openPainPoint, setOpenPainPoint] = useState<string | null>(null);
+  const countryKeys = Object.keys(relocationData) as CountryKey[];
 
   const activeData = relocationData[activeCountry];
+
+  const handleCountryMenuKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+    event.preventDefault();
+    const currentIndex = countryKeys.indexOf(activeCountry);
+    if (currentIndex === -1) return;
+    const direction = event.key === 'ArrowRight' ? 1 : -1;
+    const nextIndex = (currentIndex + direction + countryKeys.length) % countryKeys.length;
+    setActiveCountry(countryKeys[nextIndex]);
+  };
 
   return (
     <section id="relocation-cost" className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
@@ -456,14 +467,20 @@ export function RelocationCostSection() {
           </p>
         </div>
 
-        <div className="flex overflow-x-auto justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-mandatory">
-          {(Object.keys(relocationData) as CountryKey[]).map((key) => {
+        <div
+          className="flex overflow-x-auto justify-start md:justify-center gap-2 mb-3 pb-2 pr-4 scroll-px-4 snap-x snap-mandatory"
+          onKeyDown={handleCountryMenuKeyDown}
+          tabIndex={0}
+          aria-label="Relocation country options"
+        >
+          {countryKeys.map((key) => {
             const country = relocationData[key];
             const isActive = activeCountry === key;
             return (
               <button
                 key={key}
                 onClick={() => setActiveCountry(key)}
+                aria-pressed={isActive}
                 className={`snap-start flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold whitespace-nowrap transition-all ${
                   isActive
                     ? 'bg-[#1f2933] text-white shadow-md'
@@ -482,7 +499,7 @@ export function RelocationCostSection() {
             );
           })}
         </div>
-        <p className="mb-10 text-xs text-gray-500 md:hidden">Swipe sideways to see all options.</p>
+        <p className="mb-10 text-xs text-gray-500 md:hidden">Scroll horizontally to see all options.</p>
 
         <div className="grid gap-4 sm:grid-cols-3 mb-10">
           {activeData.headlineStats.map((item) => (

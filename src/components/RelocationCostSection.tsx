@@ -243,7 +243,7 @@ const relocationData: Record<CountryKey, CountryData> = {
     flag: '🇹🇭',
     flagImage: 'https://flagcdn.com/w40/th.webp',
     headlineStats: [
-      { value: '60%', label: 'Thais and expats hit by scams in 2025 (GASA Report)' },
+      { value: '60%', label: 'Thais and expats hit by scams in 2025 (Global Anti-Scam Alliance report)' },
       { value: '$3.2B USD', label: 'Total national scam losses (≈115 billion baht)' },
       { value: '110,000+', label: 'Companies with foreign investment under nominee scrutiny (DBD 2026)' },
     ],
@@ -283,7 +283,7 @@ const relocationData: Record<CountryKey, CountryData> = {
         title: 'Nominee Land & Business Structure Fraud',
         avgLoss: '$10,000–$500,000+',
         description:
-          'Lawyers and agents sell foreigners the idea of owning land or running a business through a Thai nominee shareholder. This is explicitly illegal under the Foreign Business Act.',
+          'Lawyers and agents sell foreigners the idea of owning land or running a business through a Thai nominee shareholder. Using nominee structures to bypass foreign ownership restrictions is illegal under the Foreign Business Act.',
         stat: '820 illegal nominee businesses prosecuted (Sept 2024–Jan 2025) with 12.5 billion baht (~$350M USD) damages; 110,000+ companies under scrutiny in 2026',
         timeWasted: 'Months to years',
         source: 'The Nation Thailand / DBD / Lexology 2025–2026',
@@ -293,7 +293,7 @@ const relocationData: Record<CountryKey, CountryData> = {
         title: 'The "30+30+30 Year Lease" Legal Fiction',
         avgLoss: '$50,000–$300,000+',
         description:
-          'Agents sell foreigners a 90-year lease structured as three 30-year terms. Only the first 30 years is legally enforceable.',
+          'Agents sell foreigners a 90-year lease structured as three 30-year terms. Only the first 30 years are legally enforceable.',
         stat: 'Widespread practice sold across Phuket, Koh Samui, Pattaya',
         timeWasted: 'Long-term legal exposure',
         source: 'SamuiForSale Legal Analysis / LexBangkok 2025',

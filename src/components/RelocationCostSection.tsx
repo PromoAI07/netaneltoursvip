@@ -34,6 +34,7 @@ interface ScamStatRow {
 interface CountryData {
   label: string;
   flag: string;
+  flagImage: string;
   headlineStats: HeadlineStat[];
   painPoints: PainPoint[];
   scamRows: ScamStatRow[];
@@ -45,6 +46,7 @@ const relocationData: Record<CountryKey, CountryData> = {
   vietnam: {
     label: 'Vietnam',
     flag: '🇻🇳',
+    flagImage: 'https://flagcdn.com/w40/vn.webp',
     headlineStats: [
       { value: '72%', label: 'Expats hit with rental fraud' },
       { value: '$15,000+', label: 'Average land scam loss' },
@@ -239,65 +241,197 @@ const relocationData: Record<CountryKey, CountryData> = {
   thailand: {
     label: 'Thailand',
     flag: '🇹🇭',
+    flagImage: 'https://flagcdn.com/w40/th.webp',
     headlineStats: [
-      { value: '60%', label: 'Thais and expats hit by fraud in 2024' },
-      { value: '$350,000+', label: 'Average illegal nominee property loss when seized' },
-      { value: '49,000', label: 'Businesses currently under nominee investigation' },
+      { value: '60%', label: 'Thais and expats hit by scams in 2025 (Global Anti-Scam Alliance report)' },
+      { value: '$3.2B USD', label: 'Total national scam losses (≈115 billion baht)' },
+      { value: '110,000+', label: 'Companies with foreign investment under nominee scrutiny (DBD 2026)' },
     ],
-    painPoints: Array.from({ length: 12 }, (_, index) => ({
-      id: `#${String(index + 1).padStart(2, '0')}`,
-      title:
-        index === 0
-          ? 'Fake Apartment & Condo Listings'
-          : `Coming Soon — Thailand Pain Point ${String(index + 1).padStart(2, '0')}`,
-      avgLoss: 'Pending full source dataset',
-      description:
-        index === 0
-          ? 'Scammers post stolen photos... (full details as provided in the source brief)'
-          : 'This entry is reserved for the full Thailand source brief details.',
-      stat: 'Pending full source dataset',
-      timeWasted: 'Pending full source dataset',
-      source: 'Provided Thailand source brief',
-    })),
+    painPoints: [
+      {
+        id: '#01',
+        title: 'Fake Apartment & Condo Listings',
+        avgLoss: '$500–$2,500',
+        description:
+          'Scammers post stolen photos on Facebook Marketplace and LINE groups at below-market prices. You transfer a deposit. The "landlord" blocks you and disappears.',
+        stat: 'Surging with tourism boom (12M+ foreign arrivals early 2025)',
+        timeWasted: '2–4 weeks',
+        source: 'Portail-Asie Thailand Scams 2026 / Expat reports',
+      },
+      {
+        id: '#02',
+        title: 'All-Thai Rental Contracts with Hidden Clauses',
+        avgLoss: '$1,000–$4,000',
+        description:
+          'Most rental contracts are drafted in Thai only. Foreigners sign agreements with hidden penalties, eviction clauses, and landlord escape routes they never knew existed.',
+        stat: "Thailand's rental sector has no unified regulatory framework",
+        timeWasted: 'Months of dispute',
+        source: 'Pattaya Prestige Properties / ThaiLaw.org 2025',
+      },
+      {
+        id: '#03',
+        title: 'Deposit Theft',
+        avgLoss: '$600–$2,500',
+        description:
+          'Landlords invent damage claims to keep your full deposit on exit. Foreign tenants are specifically targeted.',
+        stat: 'Among top 3 expat complaints in Bangkok, Phuket, Pattaya, Chiang Mai',
+        timeWasted: '1–3 months',
+        source: 'ThaiLaw.org / Expat.com Reports 2025',
+      },
+      {
+        id: '#04',
+        title: 'Nominee Land & Business Structure Fraud',
+        avgLoss: '$10,000–$500,000+',
+        description:
+          'Lawyers and agents sell foreigners the idea of owning land or running a business through a Thai nominee shareholder. Using nominee structures to bypass foreign ownership restrictions is illegal under the Foreign Business Act.',
+        stat: '820 illegal nominee businesses prosecuted (Sept 2024–Jan 2025) with 12.5 billion baht (~$350M USD) damages; 110,000+ companies under scrutiny in 2026',
+        timeWasted: 'Months to years',
+        source: 'The Nation Thailand / DBD / Lexology 2025–2026',
+      },
+      {
+        id: '#05',
+        title: 'The "30+30+30 Year Lease" Legal Fiction',
+        avgLoss: '$50,000–$300,000+',
+        description:
+          'Agents sell foreigners a 90-year lease structured as three 30-year terms. Only the first 30 years are legally enforceable.',
+        stat: 'Widespread practice sold across Phuket, Koh Samui, Pattaya',
+        timeWasted: 'Long-term legal exposure',
+        source: 'SamuiForSale Legal Analysis / LexBangkok 2025',
+      },
+      {
+        id: '#06',
+        title: 'Fake Visa & Work Permit Agents',
+        avgLoss: '$500–$2,000',
+        description:
+          'Fake TDAC (digital arrival card) websites, fake education visa agents, and fake work permit services take upfront fees and deliver nothing.',
+        stat: '10% of foreign arrivals used fake TDAC sites (Immigration Bureau Mar 2026) — potential $100M losses',
+        timeWasted: '2–8 weeks',
+        source: 'Thai Immigration Bureau / ThaiExaminer 2026',
+      },
+      {
+        id: '#07',
+        title: 'Jet Ski & Vehicle Damage Scams',
+        avgLoss: '$300–$2,000 per incident',
+        description:
+          'Rented jet ski or motorbike is returned in normal condition. Vendor claims pre-existing damage and demands cash on the spot. Police sometimes complicit.',
+        stat: 'Endemic in Phuket and Pattaya — decades-old but still actively reported in 2026',
+        timeWasted: 'Immediate to several days',
+        source: 'Portail-Asie / Expat.com Community Reports 2026',
+      },
+      {
+        id: '#08',
+        title: 'Tuk-Tuk & Taxi Gold Shop Scam',
+        avgLoss: '$200–$3,000 in fake purchases',
+        description:
+          'Driver offers a "free tour" or heavily discounted ride. Takes you to a fake gem or gold shop where you are pressured into buying worthless merchandise.',
+        stat: 'One of the longest-running tourist and expat scams in Bangkok — still active daily',
+        timeWasted: 'Day one',
+        source: 'Expat.com / Multiple Verified Reports 2025–2026',
+      },
+      {
+        id: '#09',
+        title: 'Investment & Romance Scam ("Pig Butchering")',
+        avgLoss: '$5,000–$50,000+',
+        description:
+          'Scammer builds romantic or friendship relationship online, then introduces a fake crypto or forex platform.',
+        stat: 'Investment scams represent the majority of financial fraud losses; 60% of Thais already victimized in 2025',
+        timeWasted: 'Months',
+        source: 'Bangkok Post / Chulalongkorn University / GASA 2025',
+      },
+      {
+        id: '#10',
+        title: 'Illegal Business Operations Leading to Arrest',
+        avgLoss: '$5,000–$100,000+',
+        description:
+          'Foreigners unknowingly run businesses in restricted sectors under the Foreign Business Act. Authorities raid and shut them down.',
+        stat: '820 illegal foreign-operated businesses prosecuted Sept 2024–Jan 2025',
+        timeWasted: 'Months to years',
+        source: 'The Nation Thailand / DSI Reports 2025–2026',
+      },
+      {
+        id: '#11',
+        title: 'Currency & ATM Skimming Fraud',
+        avgLoss: '$100–$800',
+        description: 'ATM skimming devices and dynamic currency conversion at ATMs. Street money changers offer fake bills.',
+        stat: 'Widespread in tourist corridors',
+        timeWasted: 'Immediate',
+        source: 'Portail-Asie Thailand Scams 2026',
+      },
+      {
+        id: '#12',
+        title: 'Immigration Overstay Traps',
+        avgLoss: '$1,000–$5,000',
+        description:
+          'Visa run agents provide incorrect information. Foreigners overstay unknowingly. Raids increased sharply in 2025.',
+        stat: 'Multiple coordinated raids across Thai islands in 2025',
+        timeWasted: 'Weeks to months',
+        source: 'ThaiEmbassy.com / ThaiVisa Reports 2025–2026',
+      },
+    ],
     scamRows: [
-      {
-        scamType: 'General Fraud Exposure (2024)',
-        percentHit: '60% of Thais and expats',
-        avgLoss: 'Not listed in provided extract',
-      },
-      {
-        scamType: 'Illegal nominee property seizure',
-        percentHit: 'Not listed in provided extract',
-        avgLoss: '$350,000+',
-      },
-      {
-        scamType: 'Businesses under nominee investigation',
-        percentHit: '49,000 businesses',
-        avgLoss: 'Not listed in provided extract',
-      },
+      { scamType: 'Deposit Theft', percentHit: 'Top 3 complaint category', avgLoss: '$1,500' },
+      { scamType: 'Fake Rental Listings', percentHit: 'Surging with tourism boom', avgLoss: '$1,800' },
+      { scamType: 'Nominee Land / Biz Fraud', percentHit: '110,000+ companies checked', avgLoss: '$50,000–$350,000+' },
+      { scamType: '30+30+30 Lease Fiction', percentHit: 'Widespread in key areas', avgLoss: '$100,000+' },
+      { scamType: 'Fake Visa / TDAC Agents', percentHit: '10% of foreign arrivals', avgLoss: '$1,000' },
+      { scamType: 'Jet Ski / Vehicle Damage', percentHit: 'Endemic in Phuket & Pattaya', avgLoss: '$800' },
+      { scamType: 'Tuk-Tuk Gold Shop Scam', percentHit: 'Active in Bangkok daily', avgLoss: '$1,200' },
+      { scamType: 'Romance / Pig Butchering', percentHit: 'Majority of fraud losses', avgLoss: '$15,000+' },
+      { scamType: 'Illegal Business Raid', percentHit: '820 prosecuted', avgLoss: '$30,000+' },
+      { scamType: 'ATM / Currency Fraud', percentHit: 'Widespread in tourist areas', avgLoss: '$400' },
     ],
     savingsRows: [
       {
-        category: 'Fraud Exposure Risk',
-        withoutService: '60% of Thais and expats were hit by fraud in 2024',
-        withService: 'Verified service provider network and guided onboarding',
-        save: 'Reduce exposure to documented high-frequency fraud',
+        category: 'Apartment Search',
+        withoutService: 'Fake listings, Thai-only contracts',
+        withService: 'Verified units, bilingual contracts',
+        save: '$2,000–$5,000',
       },
       {
-        category: 'Nominee Property Exposure',
-        withoutService: 'Average illegal nominee property loss when seized: $350,000+',
-        withService: 'Legally compliant property diligence and document checks',
-        save: 'Avoid potential $350,000+ seizure loss',
+        category: 'Lease / Property Legal Review',
+        withoutService: '30+30+30 fiction, nominee risk',
+        withService: 'Proper legal structure',
+        save: '$50,000–$300,000+',
       },
       {
-        category: 'Business Setup Legal Risk',
-        withoutService: '49,000 businesses are under nominee investigation',
-        withService: 'Legally compliant setup guidance and licensed referrals',
-        save: 'Avoid high-risk nominee structures under active enforcement',
+        category: 'Business Setup',
+        withoutService: 'Illegal nominee, FBA violation',
+        withService: 'Compliant legal entity',
+        save: '$5,000–$100,000+',
+      },
+      {
+        category: 'Visa & Work Permit',
+        withoutService: 'Fake agent, overstay, deportation risk',
+        withService: 'Licensed immigration support',
+        save: '$1,000–$5,000',
+      },
+      {
+        category: 'Airport Transfer',
+        withoutService: 'Scam taxi, gold shop detour',
+        withService: 'Secure vetted private pickup',
+        save: '$100–$200',
+      },
+      {
+        category: 'Vehicle Rental',
+        withoutService: 'Jet ski damage scam',
+        withService: 'Trusted vetted vendors only',
+        save: '$500–$2,000',
+      },
+      {
+        category: 'Time Cost',
+        withoutService: '8–12 weeks settling alone',
+        withService: '1–2 weeks guided',
+        save: '$4,000–$10,000',
+      },
+      {
+        category: 'Legal & Safety Net',
+        withoutService: 'No contacts, no recourse',
+        withService: 'Local lawyer + network on call',
+        save: 'Priceless',
       },
     ],
     totalSavingsCallout:
-      'Known Thailand exposure indicators: 60% fraud impact in 2024, $350,000+ average illegal nominee seizure loss, and 49,000 businesses under nominee investigation.',
+      'Conservative total savings: $20,000–$400,000+ | ROI: 10x–100x on a $2,000–$3,000 service',
   },
 };
 
@@ -336,6 +470,12 @@ export function RelocationCostSection() {
                     : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
                 }`}
               >
+                <img
+                  src={country.flagImage}
+                  alt={`${country.label} flag`}
+                  className="h-4 w-6 rounded-sm object-cover border border-black/10"
+                  loading="lazy"
+                />
                 <span>{country.flag}</span>
                 <span>{country.label}</span>
               </button>
@@ -354,12 +494,6 @@ export function RelocationCostSection() {
 
         <div className="rounded-2xl border border-gray-200 bg-[#f5f5f7] p-4 sm:p-6 lg:p-8 mb-10">
           <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2933] mb-5">12 Pain Points</h3>
-          {activeCountry === 'thailand' && (
-            <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-              Thailand entries are structured and ready, with available sourced values shown. Remaining rows are marked
-              for full source-brief import.
-            </div>
-          )}
           <div className="space-y-3">
             {activeData.painPoints.map((point) => {
               const key = `${activeCountry}-${point.id}`;

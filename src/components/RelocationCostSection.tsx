@@ -564,11 +564,11 @@ export function RelocationCostSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-sm">
+          <div className="min-w-0 rounded-2xl border border-gray-200 bg-white shadow-sm">
             <div className="px-5 sm:px-6 py-4 border-b border-gray-100">
               <h3 className="text-xl sm:text-2xl font-bold text-[#1f2933]">Scam Statistics</h3>
             </div>
-            <div className="overflow-x-auto">
+            <div className="w-full overflow-x-auto [-webkit-overflow-scrolling:touch]">
               <table className="w-full text-sm min-w-[560px]">
                 <thead className="bg-[#f8fafc] text-[#1f2933]">
                   <tr>
@@ -590,11 +590,11 @@ export function RelocationCostSection() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-sm">
+          <div className="min-w-0 rounded-2xl border border-gray-200 bg-white shadow-sm">
             <div className="px-5 sm:px-6 py-4 border-b border-gray-100">
               <h3 className="text-xl sm:text-2xl font-bold text-[#1f2933]">What You Save</h3>
             </div>
-            <div className="overflow-x-auto">
+            <div className="w-full overflow-x-auto [-webkit-overflow-scrolling:touch]">
               <table className="w-full text-sm min-w-[620px]">
                 <thead className="bg-[#f8fafc] text-[#1f2933]">
                   <tr>

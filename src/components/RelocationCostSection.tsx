@@ -249,19 +249,19 @@ const relocationData: Record<CountryKey, CountryData> = {
       title:
         index === 0
           ? 'Fake Apartment & Condo Listings'
-          : `Thailand Pain Point ${String(index + 1).padStart(2, '0')}`,
-      avgLoss: 'Not listed in provided extract',
+          : `Coming Soon — Thailand Pain Point ${String(index + 1).padStart(2, '0')}`,
+      avgLoss: 'Pending full source dataset',
       description:
         index === 0
           ? 'Scammers post stolen photos... (full details as provided in the source brief)'
-          : 'Full Thailand pain point details are referenced in the provided source brief.',
-      stat: 'Not listed in provided extract',
-      timeWasted: 'Not listed in provided extract',
+          : 'This entry is reserved for the full Thailand source brief details.',
+      stat: 'Pending full source dataset',
+      timeWasted: 'Pending full source dataset',
       source: 'Provided Thailand source brief',
     })),
     scamRows: [
       {
-        scamType: 'Fraud exposure (2024)',
+        scamType: 'General Fraud Exposure (2024)',
         percentHit: '60% of Thais and expats',
         avgLoss: 'Not listed in provided extract',
       },
@@ -278,19 +278,32 @@ const relocationData: Record<CountryKey, CountryData> = {
     ],
     savingsRows: [
       {
-        category: 'Thailand savings breakdown',
-        withoutService: 'Full per-category details are in the provided source brief',
-        withService: 'Full per-category details are in the provided source brief',
-        save: 'See source brief',
+        category: 'Fraud Exposure Risk',
+        withoutService: '60% of Thais and expats were hit by fraud in 2024',
+        withService: 'Verified service provider network and guided onboarding',
+        save: 'Reduce exposure to documented high-frequency fraud',
+      },
+      {
+        category: 'Nominee Property Exposure',
+        withoutService: 'Average illegal nominee property loss when seized: $350,000+',
+        withService: 'Legally compliant property diligence and document checks',
+        save: 'Avoid potential $350,000+ seizure loss',
+      },
+      {
+        category: 'Business Setup Legal Risk',
+        withoutService: '49,000 businesses are under nominee investigation',
+        withService: 'Legally compliant setup guidance and licensed referrals',
+        save: 'Avoid high-risk nominee structures under active enforcement',
       },
     ],
-    totalSavingsCallout: 'Thailand total savings and ROI callout follow the full source brief values provided for this section.',
+    totalSavingsCallout:
+      'Known Thailand exposure indicators: 60% fraud impact in 2024, $350,000+ average illegal nominee seizure loss, and 49,000 businesses under nominee investigation.',
   },
 };
 
 export function RelocationCostSection() {
   const [activeCountry, setActiveCountry] = useState<CountryKey>('vietnam');
-  const [openPainPoint, setOpenPainPoint] = useState<string | null>('vietnam-#01');
+  const [openPainPoint, setOpenPainPoint] = useState<string | null>(null);
 
   const activeData = relocationData[activeCountry];
 
@@ -341,6 +354,12 @@ export function RelocationCostSection() {
 
         <div className="rounded-2xl border border-gray-200 bg-[#f5f5f7] p-4 sm:p-6 lg:p-8 mb-10">
           <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2933] mb-5">12 Pain Points</h3>
+          {activeCountry === 'thailand' && (
+            <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+              Thailand entries are structured and ready, with available sourced values shown. Remaining rows are marked
+              for full source-brief import.
+            </div>
+          )}
           <div className="space-y-3">
             {activeData.painPoints.map((point) => {
               const key = `${activeCountry}-${point.id}`;

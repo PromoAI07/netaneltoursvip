@@ -5,39 +5,37 @@ import {
   Shield,
   ArrowRight } from
 'lucide-react';
+import { useLanguage } from '../i18n';
 interface ToolsTeaserProps {
   onNavigate: (page: string) => void;
 }
 export function ToolsTeaser({ onNavigate }: ToolsTeaserProps) {
+  const { t } = useLanguage();
   const tools = [
   {
-    title: 'Country App Finder',
-    description:
-    'Discover the best local apps for food, rides, and payments.',
+    title: t('tools.appFinder'),
+    description: t('tools.appFinderDesc'),
     icon: Smartphone,
     color: 'text-blue-500',
     bg: 'bg-blue-50'
   },
   {
-    title: 'Packing Checklist',
-    description:
-    'Smart packing lists tailored to your trip type and duration.',
+    title: t('tools.packingChecklist'),
+    description: t('tools.packingDesc'),
     icon: CheckSquare,
     color: 'text-green-500',
     bg: 'bg-green-50'
   },
   {
-    title: 'Budget Calculator',
-    description:
-    'Estimate daily costs for accommodation, food, and transport.',
+    title: t('tools.budgetCalc'),
+    description: t('tools.budgetDesc'),
     icon: Calculator,
     color: 'text-orange-500',
     bg: 'bg-orange-50'
   },
   {
-    title: 'Visa Quick Check',
-    description:
-    'Instantly check visa requirements and official application links.',
+    title: t('tools.visaCheck'),
+    description: t('tools.visaCheckDesc'),
     icon: Shield,
     color: 'text-purple-500',
     bg: 'bg-purple-50'
@@ -51,11 +49,10 @@ export function ToolsTeaser({ onNavigate }: ToolsTeaserProps) {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-4">
-            Free Travel & Relocation Tools
+            {t('tools.heading')}
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Interactive tools to help you plan your move to Asia smarter — app finder, packing
-            lists, budget calculator, and visa checker for Thailand and Vietnam.
+            {t('tools.subheading')}
           </p>
         </div>
 
@@ -84,7 +81,7 @@ export function ToolsTeaser({ onNavigate }: ToolsTeaserProps) {
             onClick={() => onNavigate('tools')}
             className="inline-flex items-center justify-center px-8 py-4 bg-[#1f2933] text-white font-bold rounded-md hover:bg-[#374151] transition-colors group">
             
-            Explore All Tools
+            {t('tools.exploreAll')}
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

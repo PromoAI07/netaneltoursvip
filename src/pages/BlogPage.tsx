@@ -3,6 +3,7 @@ import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { blogPosts } from '../data/blogPosts';
 import { ArrowRight, Calendar, MapPin, Tag } from 'lucide-react';
+import { useLanguage } from '../i18n';
 
 // Append &fm=webp to Unsplash URLs so the browser receives WebP images
 function toWebpUrl(url: string): string {
@@ -20,6 +21,7 @@ interface BlogPageProps {
   onNavigate: (page: 'home' | 'blog' | 'article' | 'tools', id?: string) => void;
 }
 export function BlogPage({ onNavigate }: BlogPageProps) {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-[#f5f5f7] font-sans text-[#1f2933]">
       <Navbar onNavigate={onNavigate} forceDark={true} />
@@ -28,11 +30,10 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-[#1f2933] mb-4">
-              Travel Blog
+              {t('blog.pageHeading')}
             </h1>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-              Explore our latest stories, guides, and tips for your next
-              adventure.
+              {t('blog.pageSubheading')}
             </p>
           </div>
 
@@ -96,7 +97,7 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
                   onClick={() => onNavigate('article', post.id)}
                   className="inline-flex items-center justify-center px-5 py-2.5 bg-[#1f2933] text-white font-semibold text-sm rounded-lg hover:bg-[#374151] transition-colors mt-auto group w-fit">
                   
-                    Read Article
+                    {t('blog.readArticle')}
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>

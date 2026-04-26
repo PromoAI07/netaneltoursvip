@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { ChevronDown, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../i18n';
 export function HeroSection() {
+  const { t } = useLanguage();
   // Use refs instead of state to avoid 60fps React re-renders
   const sectionRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -175,7 +177,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-20 flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 py-32 min-h-[100svh]">
         <span className="text-white/70 text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-6">
-          Netanel Tours VIP
+          {t('hero.badge')}
         </span>
 
         {/* Silver radiant shine title */}
@@ -190,10 +192,9 @@ export function HeroSection() {
             textShadow: 'none',
             filter: 'drop-shadow(0 2px 12px rgba(255,255,255,0.25))'
           }}>
-          
-          Move to Vietnam or Thailand
-          <br />
-          Without the Stress.
+          {t('hero.title').split('\n').map((line, i) => (
+            <span key={i}>{i > 0 && <br />}{line}</span>
+          ))}
         </h1>
 
         {/* Sub-headline */}
@@ -203,8 +204,7 @@ export function HeroSection() {
             textShadow:
             '0 1px 12px rgba(0,0,0,0.9), 0 2px 24px rgba(0,0,0,0.7)'
           }}>
-          
-          Save time, avoid expensive mistakes, and get real local help. I live in Asia and provide on-ground support to make your relocation seamless.
+          {t('hero.subtitle')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto">
@@ -212,13 +212,13 @@ export function HeroSection() {
             onClick={() => scrollToSection('relocation-packages')}
             className="flex-1 bg-white text-[#1f2933] px-8 py-4 rounded font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center">
             
-            Relocation Packages <ArrowRight className="ml-2 h-5 w-5" />
+            {t('hero.ctaPrimary')} <ArrowRight className="ml-2 h-5 w-5" />
           </button>
           <button
             onClick={() => scrollToSection('services')}
             className="flex-1 border border-white/80 text-white px-8 py-4 rounded font-bold text-lg hover:bg-white/10 transition-colors">
             
-            Travel Tools 🔧
+            {t('hero.ctaSecondary')}
           </button>
         </div>
       </div>

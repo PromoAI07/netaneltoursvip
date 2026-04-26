@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { blogPosts } from '../data/blogPosts';
 import { ArrowLeft, Calendar, Clock, Tag, User } from 'lucide-react';
+import { useLanguage } from '../i18n';
 
 // Append &fm=webp to Unsplash URLs so the browser receives WebP images
 export function toWebpUrl(url: string): string {
@@ -143,6 +144,7 @@ export function renderMarkdown(markdown: string): string {
   return html;
 }
 export function ArticlePage({ articleId, onNavigate }: ArticlePageProps) {
+  const { t } = useLanguage();
   // Handle both string IDs (from URL/data) and number IDs (if passed from props)
   // The data file uses string IDs (e.g., 'rent-rooms-thailand-vietnam')
   // But the interface in App.tsx defines articleId as number | undefined.
@@ -176,12 +178,12 @@ export function ArticlePage({ articleId, onNavigate }: ArticlePageProps) {
             onClick={() => onNavigate('blog')}
             className="text-blue-600 hover:underline">
             
-            Back to Blog
+            {t('blog.backToBlog')}
           </button>
         </div>
       </div>);
-
   }
+
   return (
     <div className="min-h-screen bg-[#f5f5f7] font-sans text-[#1f2933]">
       <Navbar onNavigate={onNavigate} forceDark={true} />
@@ -225,7 +227,7 @@ export function ArticlePage({ articleId, onNavigate }: ArticlePageProps) {
               className="inline-flex items-center text-gray-500 hover:text-[#1f2933] mb-8 transition-colors group">
               
               <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
-              Back to Blog
+              {t('blog.backToBlog')}
             </button>
 
             {/* Render Markdown Content */}

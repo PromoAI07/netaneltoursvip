@@ -1,4 +1,5 @@
 import { MapPin, ExternalLink } from 'lucide-react';
+import { useLanguage } from '../i18n';
 interface Place {
   city: string;
   name: string;
@@ -66,6 +67,7 @@ function groupByCity(places: Place[]): Record<string, Place[]> {
   );
 }
 export function RecommendedPlacesSection() {
+  const { t } = useLanguage();
   return (
     <section
       id="recommended"
@@ -76,15 +78,14 @@ export function RecommendedPlacesSection() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-[#1f2933]/8 border border-[#1f2933]/15 rounded-full px-4 py-1.5 mb-4">
             <span className="text-xs font-bold tracking-widest uppercase text-[#4b5563]">
-              Personally Vetted
+              {t('recommended.badge')}
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-3">
-            Personally Recommended Places to Stay in Asia
+            {t('recommended.heading')}
           </h2>
           <p className="text-[#4b5563] text-base md:text-lg max-w-2xl mx-auto">
-            Real places I've personally stayed at in Thailand and Vietnam and recommend. Updated as I
-            explore new destinations — ideal for expats and relocators scouting accommodation.
+            {t('recommended.subheading')}
           </p>
         </div>
 
@@ -106,7 +107,7 @@ export function RecommendedPlacesSection() {
                   </h3>
                   <span className="ml-auto text-xs text-gray-600 font-medium">
                     {group.places.length}{' '}
-                    {group.places.length === 1 ? 'place' : 'places'}
+                    {group.places.length === 1 ? t('recommended.place') : t('recommended.places')}
                   </span>
                 </div>
 
@@ -147,7 +148,7 @@ export function RecommendedPlacesSection() {
                           referrerPolicy="no-referrer-when-downgrade"
                           className="flex items-center gap-1.5 px-4 py-2 bg-[#1f2933] text-white text-xs font-semibold rounded-lg hover:bg-[#374151] transition-colors flex-shrink-0 whitespace-nowrap">
                           
-                              Book <ExternalLink className="h-3 w-3" />
+                              {t('recommended.book')} <ExternalLink className="h-3 w-3" />
                             </a>
                           </div>
                       )}
@@ -161,8 +162,7 @@ export function RecommendedPlacesSection() {
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-8">
-          All booking links are affiliate links — you pay the same price, and it
-          helps support my travels. Thank you! 🙏
+          {t('recommended.disclaimer')}
         </p>
       </div>
     </section>);

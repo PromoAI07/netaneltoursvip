@@ -1,5 +1,6 @@
 import { ArrowRight, MapPin, Calendar, Tag } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
+import { useLanguage } from '../i18n';
 interface BlogSectionProps {
   onNavigate?: (page: 'home' | 'blog' | 'article', id?: string) => void;
 }
@@ -17,15 +18,16 @@ function toWebpUrl(url: string): string {
   return url;
 }
 export function BlogSection({ onNavigate }: BlogSectionProps) {
+  const { t } = useLanguage();
   return (
     <section id="blog" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#f5f5f7]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1f2933] mb-4">
-            Asia Relocation & Travel Blog
+            {t('blog.heading')}
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Practical guides on how to relocate to Thailand or Vietnam — visa rules, cost of living for expats, housing tips, and local insights.
+            {t('blog.subheading')}
           </p>
         </div>
 
@@ -89,7 +91,7 @@ export function BlogSection({ onNavigate }: BlogSectionProps) {
                 onClick={() => onNavigate?.('article', post.id)}
                 className="inline-flex items-center justify-center px-5 py-2.5 bg-[#1f2933] text-white font-semibold text-sm rounded-lg hover:bg-[#374151] transition-colors mt-auto group w-fit">
                 
-                  Read Article
+                  {t('blog.readArticle')}
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
               </div>
@@ -102,7 +104,7 @@ export function BlogSection({ onNavigate }: BlogSectionProps) {
             onClick={() => onNavigate?.('blog')}
             className="inline-flex items-center justify-center px-8 py-3 border border-[#1f2933] text-[#1f2933] font-medium rounded-md hover:bg-[#1f2933] hover:text-white transition-colors duration-300">
             
-            View All Articles
+            {t('blog.viewAll')}
           </button>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../i18n';
 import {
   Hotel,
   Plane,
@@ -204,6 +205,7 @@ function IconCard({
 }
 // --- Main Section Component ---
 export function TravelerJourneySection() {
+  const { t } = useLanguage();
   // Keep the event listener so navbar links still scroll here
   useEffect(() => {
     const handleOpenPhase = () => {
@@ -242,13 +244,13 @@ export function TravelerJourneySection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-[#1f2933] mb-6">
-            Smart Travel & Relocation Booking System
+            {t('journey.heading')}
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg mb-4">
-            Everything you need for travel and relocation to Asia — in one place. Use my trusted partner links to book flights, hotels, cars, insurance, and local experiences at the best prices.
+            {t('journey.subheading')}
           </p>
           <div className="inline-block bg-gray-100 text-gray-600 text-sm px-4 py-2 rounded-full font-medium">
-            Note: Clicking these tools will redirect you to my trusted external partners.
+            {t('journey.note')}
           </div>
         </div>
 
@@ -257,9 +259,9 @@ export function TravelerJourneySection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StandardCard
               step={1}
-              title="Flights"
-              description="Best deals on flights to any destination worldwide."
-              buttonText="Search Flights"
+              title={t('journey.flightsTitle')}
+              description={t('journey.flightsDesc')}
+              buttonText={t('journey.flightsBtn')}
               icon={Plane}
               link="https://trip.tp.st/By8d4T6V"
               imageUrl="/file_00000000c43c71faaed3da2abf2efc90.webp"
@@ -267,9 +269,9 @@ export function TravelerJourneySection() {
             
             <StandardCard
               step={2}
-              title="Hotels & Stays"
-              description="Luxury hotels and resorts worldwide with exclusive perks."
-              buttonText="Book Stays"
+              title={t('journey.hotelsTitle')}
+              description={t('journey.hotelsDesc')}
+              buttonText={t('journey.hotelsBtn')}
               icon={Hotel}
               link="https://booking.tp.st/fE9TPCct"
               imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_38_15_AM.webp"
@@ -277,9 +279,9 @@ export function TravelerJourneySection() {
             
             <StandardCard
               step={3}
-              title="Flight & Hotel Deals"
-              description="Bundled flight and hotel packages at unbeatable prices."
-              buttonText="View Deals"
+              title={t('journey.dealsTitle')}
+              description={t('journey.dealsDesc')}
+              buttonText={t('journey.dealsBtn')}
               icon={Luggage}
               link="https://trip.tp.st/bHOWSgz6"
               imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_35_49_AM.webp"
@@ -296,17 +298,17 @@ export function TravelerJourneySection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <IconCard
               step={4}
-              title="Fixed Your Visa Yet?"
-              description="Get guidance on visas for Thailand, Vietnam and more."
-              buttonText="Get Visa Help"
+              title={t('journey.visaTitle')}
+              description={t('journey.visaDesc')}
+              buttonText={t('journey.visaBtn')}
               icon={Shield}
               onAction={scrollToVisa} />
             
             <StandardCard
               step={5}
-              title="Travel Insurance"
-              description="Medical coverage and travel protection for peace of mind."
-              buttonText="Get Insurance"
+              title={t('journey.insuranceTitle')}
+              description={t('journey.insuranceDesc')}
+              buttonText={t('journey.insuranceBtn')}
               icon={HeartPulse}
               link="https://ektatraveling.tp.st/nODljNJv"
               imageUrl="/ChatGPT_Image_Feb_21,_2026,_12_04_42_PM.webp"
@@ -314,18 +316,18 @@ export function TravelerJourneySection() {
             
             <DualActionCard
               step={6}
-              title="How Do You Ride?"
-              description="Rental cars and airport transfers worldwide."
+              title={t('journey.rideTitle')}
+              description={t('journey.rideDesc')}
               icon={Car}
               imageUrl="/file_000000004d2471faa18d09ce93a2c86d.webp"
               imageAlt="Rental Cars and Transfers"
               buttons={[
               {
-                text: 'Rent a Car',
+                text: t('journey.rentCar'),
                 link: 'https://discovercars.tp.st/CY3Ty5Yz'
               },
               {
-                text: 'Book Transfer',
+                text: t('journey.bookTransfer'),
                 link: 'https://holidaytaxis.tp.st/PumDgPOV'
               }]
               } />
@@ -341,27 +343,27 @@ export function TravelerJourneySection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <DualActionCard
               step={7}
-              title="Explore Local Experiences"
-              description="Theme parks, guided tours, and unique local attractions."
+              title={t('journey.experiencesTitle')}
+              description={t('journey.experiencesDesc')}
               icon={Ticket}
               imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_50_43_AM.webp"
               imageAlt="Tickets and Attractions"
               buttons={[
               {
-                text: 'Explore Tickets',
+                text: t('journey.exploreTickets'),
                 link: 'https://tiqets.tp.st/JAQlFtfb'
               },
               {
-                text: 'Find a Guide',
+                text: t('journey.findGuide'),
                 link: 'https://getyourguide.tp.st/UAhQqSZ7'
               }]
               } />
             
             <StandardCard
               step={8}
-              title="Stay Connected"
-              description="Best eSIM deals for data anywhere in the world."
-              buttonText="Get eSIM"
+              title={t('journey.esimTitle')}
+              description={t('journey.esimDesc')}
+              buttonText={t('journey.esimBtn')}
               icon={Smartphone}
               link="https://airalo.tp.st/sbw9crL4"
               imageUrl="/ChatGPT_Image_Feb_21,_2026,_11_59_00_AM.webp"

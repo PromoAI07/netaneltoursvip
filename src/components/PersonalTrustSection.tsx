@@ -6,7 +6,9 @@ import {
   Shield,
   User } from
 'lucide-react';
+import { useLanguage } from '../i18n';
 export function PersonalTrustSection() {
+  const { t } = useLanguage();
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-200">
       <div className="max-w-7xl mx-auto">
@@ -33,24 +35,24 @@ export function PersonalTrustSection() {
           {/* Content */}
           <div className="flex flex-col justify-center">
             <h2 className="md:text-4xl font-bold text-[#1f2933] mb-8 text-[28px]">
-              Why Choose Us for Your Relocation to Asia
+              {t('trust.heading')}
             </h2>
 
             <div className="space-y-4 text-[#4b5563] text-base md:text-lg leading-relaxed mb-8">
               <p>
-                I'm Netanel, based right here in Asia. I don't just give advice from afar — I provide real, local support to help you relocate to Thailand or Vietnam without the hassle.
+                {t('trust.p1')}
               </p>
               <p>
-                Moving across the world can be overwhelming. From navigating confusing visa rules and finding the right neighborhood, to dealing with language barriers and local paperwork, the process is full of potential traps for foreigners.
+                {t('trust.p2')}
               </p>
               <p>
-                I help you skip the frustration. By working with me, you save time, save money, and avoid common scams that many newcomers fall for when relocating to Asia.
+                {t('trust.p3')}
               </p>
               <p>
-                Whether you need a simple consultation to plan your move, or full VIP concierge support when you land, I connect you with trusted local resources — lawyers, real estate agents, and services — ensuring your transition from tourist to resident is seamless.
+                {t('trust.p4')}
               </p>
               <p className="font-medium text-[#1f2933]">
-                Don't guess your way through relocating to Asia. Get expert help from someone who lives here.
+                {t('trust.p5')}
               </p>
             </div>
 
@@ -60,7 +62,7 @@ export function PersonalTrustSection() {
                 onClick={() => document.getElementById('relocation-packages')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-[#1f2933] text-white px-8 py-4 rounded font-semibold hover:bg-[#374151] transition-colors flex items-center justify-center">
                 
-                View Relocation Packages for Asia <ArrowRight className="ml-2 h-5 w-5" />
+                {t('trust.ctaPrimary')} <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <a
                 href="https://api.whatsapp.com/send?phone=972529566211"
@@ -70,7 +72,7 @@ export function PersonalTrustSection() {
                 className="border border-gray-300 text-[#1f2933] px-8 py-4 rounded font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center">
                 
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Chat on WhatsApp
+                {t('trust.ctaWhatsApp')}
               </a>
             </div>
 
@@ -81,7 +83,7 @@ export function PersonalTrustSection() {
                   <Clock className="h-5 w-5 text-[#4b5563]" />
                 </div>
                 <span className="text-sm font-medium text-[#1f2933]">
-                  17+ Years Travel Experience
+                  {t('trust.stat1')}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -89,7 +91,7 @@ export function PersonalTrustSection() {
                   <Globe className="h-5 w-5 text-[#4b5563]" />
                 </div>
                 <span className="text-sm font-medium text-[#1f2933]">
-                  Worldwide Destination Expertise
+                  {t('trust.stat2')}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -97,7 +99,7 @@ export function PersonalTrustSection() {
                   <Shield className="h-5 w-5 text-[#4b5563]" />
                 </div>
                 <span className="text-sm font-medium text-[#1f2933]">
-                  Personal VIP Concierge Support
+                  {t('trust.stat3')}
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -105,7 +107,7 @@ export function PersonalTrustSection() {
                   <User className="h-5 w-5 text-[#4b5563]" />
                 </div>
                 <span className="text-sm font-medium text-[#1f2933]">
-                  Real Traveler, Real Experience
+                  {t('trust.stat4')}
                 </span>
               </div>
             </div>

@@ -1,6 +1,8 @@
 import { Calendar, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../i18n';
 
 export function ConversionSection() {
+  const { t } = useLanguage();
   return (
     <section
       id="plan-trip"
@@ -33,10 +35,10 @@ export function ConversionSection() {
         <div className="inline-block bg-black/40 backdrop-blur-sm rounded-2xl px-8 py-10 shadow-xl border border-white/10">
           <Calendar className="w-12 h-12 text-white mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
-            Start Your Relocation to Asia Today
+            {t('conversion.heading')}
           </h2>
           <p className="text-white/90 text-lg leading-relaxed mb-8">
-            Book a 1-on-1 consultation to discuss your move to Thailand or Vietnam. Get expert advice, avoid expensive mistakes, and let's map out your relocation to Asia.
+            {t('conversion.body')}
           </p>
           <a
             href="https://calendly.com/netaneltoursvip/new-meeting"
@@ -44,7 +46,7 @@ export function ConversionSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-full sm:w-auto bg-white text-[#1f2933] font-bold py-4 px-8 rounded-md hover:bg-gray-100 transition-colors shadow-lg"
           >
-            Get Help Moving to Thailand or Vietnam <ArrowRight className="ml-2 h-5 w-5" />
+            {t('conversion.cta')} <ArrowRight className="ml-2 h-5 w-5" />
           </a>
         </div>
       </div>

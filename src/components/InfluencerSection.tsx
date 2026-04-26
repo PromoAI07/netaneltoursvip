@@ -5,23 +5,25 @@ import {
   Globe,
   Zap } from
 'lucide-react';
+import { useLanguage } from '../i18n';
 export function InfluencerSection() {
+  const { t } = useLanguage();
   const perks = [
   {
     icon: DollarSign,
-    text: 'Earn commissions on every booking you refer'
+    text: t('influencer.perk1')
   },
   {
     icon: Globe,
-    text: 'Promote top travel brands — flights, hotels, insurance & more'
+    text: t('influencer.perk2')
   },
   {
     icon: Zap,
-    text: 'Free to join, instant access, no experience needed'
+    text: t('influencer.perk3')
   },
   {
     icon: Users,
-    text: 'Join thousands of travel creators already earning'
+    text: t('influencer.perk4')
   }];
 
   return (
@@ -83,19 +85,16 @@ export function InfluencerSection() {
             {/* Label */}
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6 w-fit">
               <span className="text-xs font-bold tracking-widest uppercase text-gray-300">
-                For Travel Influencers
+                {t('influencer.badge')}
               </span>
             </div>
 
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-              Turn Your Passion for Travel Into Real Income 💸
+              {t('influencer.heading')}
             </h3>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Are you a travel creator, blogger, or influencer? Join the same
-              affiliate program I use and start earning commissions every time
-              your audience books flights, hotels, insurance, and more — through
-              your own referral links.
+              {t('influencer.body')}
             </p>
 
             {/* Perks */}
@@ -120,11 +119,11 @@ export function InfluencerSection() {
               referrerPolicy="no-referrer-when-downgrade"
               className="inline-flex items-center justify-center gap-2 bg-white text-[#1f2933] font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg w-full sm:w-auto">
               
-              Join Now & Start Earning <ArrowRight className="h-5 w-5" />
+              {t('influencer.cta')} <ArrowRight className="h-5 w-5" />
             </a>
 
             <p className="mt-4 text-xs text-gray-500 text-center sm:text-left">
-              Free to join · No minimum followers required · Instant approval
+              {t('influencer.disclaimer')}
             </p>
           </div>
         </div>

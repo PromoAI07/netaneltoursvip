@@ -1,4 +1,7 @@
+import { useLanguage } from '../i18n';
+
 export function SocialMediaSection() {
+  const { t } = useLanguage();
   const socials = [
   {
     name: 'Instagram',
@@ -74,11 +77,10 @@ export function SocialMediaSection() {
       
       <div className="max-w-4xl mx-auto text-center">
         <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-          Follow Me & Stay Connected
+          {t('social.heading')}
         </h3>
         <p className="text-gray-400 mb-10 text-base">
-          Join the community — follow for travel tips, deals, and real
-          adventures
+          {t('social.subheading')}
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
@@ -99,7 +101,7 @@ export function SocialMediaSection() {
         </div>
 
         <p className="mt-8 text-gray-500 text-sm">
-          Tag me in your adventures — I'd love to see where you go! ✈️
+          {t('social.tagline')}
         </p>
       </div>
     </section>);

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { useLanguage } from '../i18n';
+import LanguageSwitcher from './LanguageSwitcher';
 interface NavbarProps {
   onNavigate?: (
   page: 'home' | 'blog' | 'article' | 'tools',
@@ -8,6 +10,7 @@ interface NavbarProps {
   forceDark?: boolean;
 }
 export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -97,7 +100,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             <span
               className={`text-xl font-bold tracking-tight transition-colors ${isScrolled || forceDark ? 'text-[#1f2933]' : 'text-white'}`}>
               
-              Netanel Tours VIP
+              {t('nav.brand')}
             </span>
           </div>
 
@@ -108,7 +111,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => scrollToSection('services')}
               className={`font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
               
-              Travel Steps
+              {t('nav.travelSteps')}
             </button>
 
             {/* Traveler Tools Page Link */}
@@ -116,7 +119,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => scrollToSection('tools')}
               className={`font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
               
-              Traveler Tools 🔧
+              {t('nav.travelerTools')}
             </button>
 
             {/* Plan & Book Dropdown */}
@@ -128,7 +131,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               <button
                 className={`flex items-center font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
                 
-                Plan & Book <ChevronDown className="ml-1 h-4 w-4" />
+                {t('nav.planBook')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {activeDropdown === 'plan' &&
               <div className="absolute top-full left-0 pt-2 w-56">
@@ -141,7 +144,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      ✈️ Flights
+                      ✈️ {t('nav.flights')}
                     </a>
                     <a
                     href="https://booking.tp.st/fE9TPCct"
@@ -149,7 +152,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      🏨 Hotels & Stays
+                      🏨 {t('nav.hotelsStays')}
                     </a>
                     <a
                     href="https://trip.tp.st/bHOWSgz6"
@@ -157,7 +160,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      📦 Flight & Hotel Deals
+                      📦 {t('nav.flightHotelDeals')}
                     </a>
                     <a
                     href="https://discovercars.tp.st/CY3Ty5Yz"
@@ -165,7 +168,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      🚗 Car Rentals
+                      🚗 {t('nav.carRentals')}
                     </a>
                     <a
                     href="https://holidaytaxis.tp.st/PumDgPOV"
@@ -173,7 +176,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      🚐 Airport Transfers
+                      🚐 {t('nav.airportTransfers')}
                     </a>
                     <a
                     href="https://ektatraveling.tp.st/nODljNJv"
@@ -181,7 +184,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      🛡️ Insurance
+                      🛡️ {t('nav.insurance')}
                     </a>
                     <a
                     href="https://airalo.tp.st/sbw9crL4"
@@ -189,7 +192,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      📱 eSIM
+                      📱 {t('nav.esim')}
                     </a>
                   </div>
                 </div>
@@ -205,7 +208,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               <button
                 className={`flex items-center font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
                 
-                Experiences <ChevronDown className="ml-1 h-4 w-4" />
+                {t('nav.experiences')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {activeDropdown === 'experiences' &&
               <div className="absolute top-full left-0 pt-2 w-56">
@@ -218,7 +221,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      🎟️ Tours & Attractions
+                      🎟️ {t('nav.toursAttractions')}
                     </a>
                     <a
                     href="https://getyourguide.tp.st/UAhQqSZ7"
@@ -226,7 +229,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     rel="noopener noreferrer"
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      🧭 Get Your Guide
+                      🧭 {t('nav.getYourGuide')}
                     </a>
                   </div>
                 </div>
@@ -238,7 +241,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => scrollToSection('visa-help')}
               className={`font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
               
-              Visa Help
+              {t('nav.visaHelp')}
             </button>
 
             {/* Community Dropdown */}
@@ -250,7 +253,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               <button
                 className={`flex items-center font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
                 
-                Community <ChevronDown className="ml-1 h-4 w-4" />
+                {t('nav.community')} <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {activeDropdown === 'community' &&
               <div className="absolute top-full right-0 pt-2 w-56">
@@ -261,38 +264,39 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                     onClick={() => scrollToSection('recommended')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      📍 Recommended Places
+                      📍 {t('nav.recommendedPlaces')}
                     </button>
                     <button
                     onClick={() => scrollToSection('blog')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      ✍️ Travel Blog
+                      ✍️ {t('nav.travelBlog')}
                     </button>
                     <button
                     onClick={() => scrollToSection('social-media')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      📲 Social Media
+                      📲 {t('nav.socialMedia')}
                     </button>
                     <button
                     onClick={() => scrollToSection('influencer')}
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#1f2933]">
                     
-                      💸 Travel Influencer
+                      💸 {t('nav.travelInfluencer')}
                     </button>
                   </div>
                 </div>
               }
             </div>
 
+            <LanguageSwitcher />
             <a
               href="https://calendly.com/netaneltoursvip/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
               className={`px-5 py-2 rounded-md font-medium transition-colors ${isScrolled || forceDark ? 'bg-[#1f2933] text-white hover:bg-[#374151]' : 'bg-white text-[#1f2933] hover:bg-gray-100'}`}>
               
-              Book Consultation
+              {t('nav.bookConsultation')}
             </a>
           </div>
 
@@ -319,12 +323,15 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
         className={`lg:hidden border-b border-white/30 absolute top-full left-0 w-full shadow-lg max-h-[80vh] overflow-y-auto transition-all duration-300 ${isScrolled ? 'bg-white/85 backdrop-blur-md' : 'bg-white/50 backdrop-blur-md'}`}>
         
           <div className="px-4 pt-2 pb-6 space-y-1">
+            <div className="pb-2 border-b border-gray-200/50">
+              <LanguageSwitcher compact />
+            </div>
             {/* Travel Steps */}
             <button
             onClick={() => scrollToSection('services')}
             className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
             
-              ✈️ Travel Steps
+              ✈️ {t('nav.travelStepsMobile')}
             </button>
 
             {/* Traveler Tools */}
@@ -332,7 +339,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             onClick={() => scrollToSection('tools')}
             className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
             
-              🔧 Traveler Tools
+              🔧 {t('nav.travelerToolsMobile')}
             </button>
 
             {/* Mobile: Plan & Book */}
@@ -341,7 +348,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => toggleMobileExpand('plan')}
               className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
               
-                Plan & Book
+                {t('nav.planBook')}
                 <ChevronDown
                 className={`h-4 w-4 transition-transform ${mobileExpanded === 'plan' ? 'rotate-180' : ''}`} />
               
@@ -354,7 +361,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    ✈️ Flights
+                    ✈️ {t('nav.flights')}
                   </a>
                   <a
                 href="https://booking.tp.st/fE9TPCct"
@@ -362,7 +369,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    🏨 Hotels & Stays
+                    🏨 {t('nav.hotelsStays')}
                   </a>
                   <a
                 href="https://trip.tp.st/bHOWSgz6"
@@ -370,7 +377,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    📦 Flight & Hotel Deals
+                    📦 {t('nav.flightHotelDeals')}
                   </a>
                   <a
                 href="https://discovercars.tp.st/CY3Ty5Yz"
@@ -378,7 +385,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    🚗 Car Rentals
+                    🚗 {t('nav.carRentals')}
                   </a>
                   <a
                 href="https://holidaytaxis.tp.st/PumDgPOV"
@@ -386,7 +393,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    🚐 Airport Transfers
+                    🚐 {t('nav.airportTransfers')}
                   </a>
                   <a
                 href="https://ektatraveling.tp.st/nODljNJv"
@@ -394,7 +401,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    🛡️ Insurance
+                    🛡️ {t('nav.insurance')}
                   </a>
                   <a
                 href="https://airalo.tp.st/sbw9crL4"
@@ -402,7 +409,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    📱 eSIM
+                    📱 {t('nav.esim')}
                   </a>
                 </div>
             }
@@ -414,7 +421,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => toggleMobileExpand('experiences')}
               className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
               
-                Experiences
+                {t('nav.experiences')}
                 <ChevronDown
                 className={`h-4 w-4 transition-transform ${mobileExpanded === 'experiences' ? 'rotate-180' : ''}`} />
               
@@ -427,7 +434,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    🎟️ Tours & Attractions
+                    🎟️ {t('nav.toursAttractions')}
                   </a>
                   <a
                 href="https://getyourguide.tp.st/UAhQqSZ7"
@@ -435,7 +442,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    🧭 Get Your Guide
+                    🧭 {t('nav.getYourGuide')}
                   </a>
                 </div>
             }
@@ -446,7 +453,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             onClick={() => scrollToSection('visa-help')}
             className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
             
-              🛂 Visa Help
+              🛂 {t('nav.visaHelp')}
             </button>
 
             {/* Mobile: Community */}
@@ -455,7 +462,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => toggleMobileExpand('community')}
               className="flex justify-between items-center w-full text-left px-3 py-3 text-[#1f2933] hover:bg-white/40 rounded-md font-medium border-b border-gray-200/50">
               
-                Community
+                {t('nav.community')}
                 <ChevronDown
                 className={`h-4 w-4 transition-transform ${mobileExpanded === 'community' ? 'rotate-180' : ''}`} />
               
@@ -466,25 +473,25 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
                 onClick={() => scrollToSection('recommended')}
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    📍 Recommended Places
+                    📍 {t('nav.recommendedPlaces')}
                   </button>
                   <button
                 onClick={() => scrollToSection('blog')}
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    ✍️ Travel Blog
+                    ✍️ {t('nav.travelBlog')}
                   </button>
                   <button
                 onClick={() => scrollToSection('social-media')}
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    📲 Social Media
+                    📲 {t('nav.socialMedia')}
                   </button>
                   <button
                 onClick={() => scrollToSection('influencer')}
                 className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:text-[#1f2933]">
                 
-                    💸 Travel Influencer
+                    💸 {t('nav.travelInfluencer')}
                   </button>
                 </div>
             }
@@ -496,7 +503,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
             rel="noopener noreferrer"
             className="block w-full text-left px-3 py-3 mt-4 bg-[#1f2933] text-white rounded-md font-medium text-center">
             
-              Book Consultation
+              {t('nav.bookConsultation')}
             </a>
           </div>
         </div>

@@ -3,6 +3,8 @@ import { HomePage } from './pages/HomePage';
 import { BlogPage } from './pages/BlogPage';
 import { ArticlePage } from './pages/ArticlePage';
 import { ToolsPage } from './pages/ToolsPage';
+import { LanguageProvider } from './i18n';
+import LanguageDetectionBanner from './components/LanguageDetectionBanner';
 type Page = 'home' | 'blog' | 'article' | 'tools';
 export function getStateFromUrl(): {
   page: Page;
@@ -83,7 +85,7 @@ export function App() {
     window.scrollTo(0, 0);
   };
   return (
-    <>
+    <LanguageProvider>
       {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
       {currentPage === 'blog' && <BlogPage onNavigate={handleNavigate} />}
       {currentPage === 'tools' && <ToolsPage onNavigate={handleNavigate} />}
@@ -93,6 +95,7 @@ export function App() {
         onNavigate={handleNavigate} />
 
       }
-    </>);
+      <LanguageDetectionBanner />
+    </LanguageProvider>);
 
 }

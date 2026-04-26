@@ -119,7 +119,7 @@ export function Navbar({ onNavigate, forceDark = false }: NavbarProps) {
               onClick={() => scrollToSection('tools')}
               className={`font-medium transition-colors ${isScrolled || forceDark ? 'text-[#1f2933] hover:text-[#4b5563]' : 'text-white/90 hover:text-white'}`}>
               
-              {t('nav.travelerTools')} 🔧
+              {t('nav.travelerTools')}
             </button>
 
             {/* Plan & Book Dropdown */}

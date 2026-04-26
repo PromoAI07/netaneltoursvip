@@ -36,7 +36,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {t('footer.copyright')}</p>
+          <p>{t('footer.copyright').replace('2026', String(new Date().getFullYear()))}</p>
         </div>
       </div>
     </footer>);

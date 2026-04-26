@@ -44,20 +44,18 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     saveLanguagePreference(newLang);
   }
 
-  function t(key: string): string {
-    const dict = translations[lang] as unknown as Record<string, unknown>;
-    const result = getNestedValue(dict, key);
-    if (result !== key) return result;
-    // Fall back to English
-    const enDict = translations['en'] as unknown as Record<string, unknown>;
-    return getNestedValue(enDict, key);
-  }
-
-  const value = useMemo<LanguageContextValue>(
-    () => ({ lang, setLang, t, dir: currentConfig.dir }),
+  const value = useMemo<LanguageContextValue>(() => {
+    function t(key: string): string {
+      const dict = translations[lang] as unknown as Record<string, unknown>;
+      const result = getNestedValue(dict, key);
+      if (result !== key) return result;
+      // Fall back to English
+      const enDict = translations['en'] as unknown as Record<string, unknown>;
+      return getNestedValue(enDict, key);
+    }
+    return { lang, setLang, t, dir: currentConfig.dir };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [lang, currentConfig.dir],
-  );
+  }, [lang, currentConfig.dir]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }

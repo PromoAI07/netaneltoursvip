@@ -181,7 +181,8 @@ export function ArticlePage({ articleId, onNavigate }: ArticlePageProps) {
             {t('blog.backToBlog')}
           </button>
         </div>
-      </div>);
+      </div>
+    );
   }
 
   return (

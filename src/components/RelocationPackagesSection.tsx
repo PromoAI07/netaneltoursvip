@@ -1,4 +1,4 @@
-import { AlertCircle, BadgeCheck, Building2, FileWarning, SearchX, ShieldCheck, Wallet, XCircle } from 'lucide-react';
+import { AlertCircle, BadgeCheck, Building2, Bus, CreditCard, FileWarning, Globe2, HeartPulse, MapPin, ScrollText, SearchX, ShieldCheck, Users, Wallet, XCircle } from 'lucide-react';
 import { useLanguage } from '../i18n';
 
 const calendlyUrl = 'https://calendly.com/netaneltoursvip/new-meeting';
@@ -12,6 +12,13 @@ export function RelocationPackagesSection() {
     { icon: XCircle, text: t('packages.pain3') },
     { icon: FileWarning, text: t('packages.pain4') },
     { icon: AlertCircle, text: t('packages.pain5') },
+    { icon: Globe2, text: t('packages.pain6') },
+    { icon: MapPin, text: t('packages.pain7') },
+    { icon: CreditCard, text: t('packages.pain8') },
+    { icon: ScrollText, text: t('packages.pain9') },
+    { icon: HeartPulse, text: t('packages.pain10') },
+    { icon: Bus, text: t('packages.pain11') },
+    { icon: Users, text: t('packages.pain12') },
   ];
 
   const packages = [
@@ -66,7 +73,7 @@ export function RelocationPackagesSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {painPoints.map(({ icon: Icon, text }) => (
             <div
               key={text}
@@ -76,6 +83,11 @@ export function RelocationPackagesSection() {
               <p className="text-sm sm:text-[15px] font-semibold text-[#1f2933] leading-snug">{text}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-5 rounded-xl border border-blue-100 bg-blue-50 px-5 py-4 flex items-start gap-3">
+          <Globe2 className="h-5 w-5 mt-0.5 text-blue-500 shrink-0" aria-hidden="true" />
+          <p className="text-sm sm:text-base font-semibold text-blue-800 leading-relaxed">{t('packages.languageNote')}</p>
         </div>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
